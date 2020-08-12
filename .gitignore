@@ -22,6 +22,7 @@ media
 .idea/**/libraries
 .idea/fullstack_quiz_project.iml
 .idea/jsLibraryMappings.xml
+.idea/vcs.xml
 *.iws /out/
 
 # Python #
