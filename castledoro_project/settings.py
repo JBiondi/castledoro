@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'castledoro.apps.CastledoroConfig',
     'users.apps.UsersConfig',
+    'frontend.apps.FrontendConfig',
 ]
 
 MIDDLEWARE = [
