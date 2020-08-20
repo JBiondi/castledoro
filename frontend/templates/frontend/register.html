@@ -13,13 +13,14 @@
 
 <h1>Register here!</h1>
 
+
 <div class="form-container">
 
     <form class="new-user-registration-form" method="POST" >
         {% csrf_token %}
         <fieldset>
             <legend>Sign up today!</legend>
-            {{ form }}
+            {{ form.as_p }}
         </fieldset>
 
         <button type="submit">Sign Up</button>
