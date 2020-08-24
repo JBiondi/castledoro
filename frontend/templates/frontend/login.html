@@ -6,28 +6,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>New User Registration</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
 </head>
 <body>
 
-<h1>Register here!</h1>
+<h1>Login</h1>
 
 
-<div class="registration-form-container">
-
-    <form class="new-user-registration-form" method="POST" >
+<div class="login-form-container">
+    <form class="login-form" method="POST" >
         {% csrf_token %}
         <fieldset>
-            <legend>Sign up today!</legend>
+            <legend>Log in</legend>
             {{ form.as_p }}
         </fieldset>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit">Log In</button>
     </form>
     <small>
-        Already have an account? <a href="{% url 'login_namespace' %}">Login Here</a>
+        Need an account? <a href="{% url 'user_registration_namespace' %}">Sign Up Here</a>
     </small>
 
 </div>

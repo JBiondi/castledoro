@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .forms import CustomUserRegistrationForm
@@ -10,7 +11,8 @@ def user_registration(request):
             form.save()
             print('we got here')
             username = form.cleaned_data.get('username')
-            return redirect('home_namespace')
+            messages.success(request, f'Account created for {username}, you are now able to log in')
+            return redirect('login_namespace')
 
     form = CustomUserRegistrationForm()
 
