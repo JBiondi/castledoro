@@ -116,3 +116,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'home_namespace'
+LOGIN_URL = 'login_namespace'
