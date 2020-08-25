@@ -13,9 +13,12 @@
 <body>
 
 <div class="navigation">
-    <a class="nav-login" href="{% url 'login_namespace' %}">Login</a>
-    <a class="nav-register" href="{% url 'user_registration_namespace' %}">Register</a>
-    <a class="nav-logout" href="{% url 'logout_namespace' %}">Logout</a>
+    {% if user.is_authenticated %}
+        <a class="nav-logout" href="{% url 'logout_namespace' %}">Logout</a>
+    {% else %}
+        <a class="nav-login" href="{% url 'login_namespace' %}">Login</a>
+        <a class="nav-register" href="{% url 'user_registration_namespace' %}">Register</a>
+    {% endif %}
 </div>
 
 <h1>Hellloooo</h1>
