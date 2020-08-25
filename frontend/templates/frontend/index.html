@@ -12,6 +12,12 @@
 </head>
 <body>
 
+<div class="navigation">
+    <a class="nav-login" href="{% url 'login_namespace' %}">Login</a>
+    <a class="nav-register" href="{% url 'user_registration_namespace' %}">Register</a>
+    <a class="nav-logout" href="{% url 'logout_namespace' %}">Logout</a>
+</div>
+
 <h1>Hellloooo</h1>
 
 <script src="{% static "frontend/main.js" %}"></script>
