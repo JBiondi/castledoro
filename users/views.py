@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .forms import CustomUserRegistrationForm
+from castledoro.models import Castle
 
 
 def user_registration(request):
@@ -23,4 +24,14 @@ def user_registration(request):
 
 @login_required
 def user_profile(request):
-    return render(request, 'frontend/user_profile.html')
+    current_user = request.user
+    castles_queryset = Castle.objects.filter(associated_user_id_id=current_user.id).order_by('last_modified')
+    castles_array = []
+
+    print(castles_array)
+
+    for castle in castles_queryset:
+        castles_array.append(castle)
+
+    context = {'castles': castles_array}
+    return render(request, 'frontend/user_profile.html', context)

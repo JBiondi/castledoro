@@ -23,6 +23,12 @@
 
 <h1>User Profile area for {{ user.username }}</h1>
 
+<h2>My Castles:</h2>
+{% for castle in castles %}
+    <p>The name of this castle is: {{ castle.castle_name }}</p>
+{% endfor %}
+
+
 <script src="{% static "frontend/main.js" %}"></script>
 </body>
 </html>
