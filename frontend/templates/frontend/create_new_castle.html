@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create a new Castle!</title>
+    <link rel="stylesheet" href="../../static/css/styles.css">
+    <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
+</head>
+<body>
+
+<h1>Create a new castle</h1>
+
+
+<div class="new-castle-form-container">
+
+    <form class="new-castle-form" method="POST" >
+        {% csrf_token %}
+        <fieldset>
+            <legend>Create your new castle!</legend>
+            {{ form.as_p }}
+        </fieldset>
+
+        <button type="submit">Create</button>
+    </form>
+</div>
+
+<script src="{% static "frontend/main.js" %}"></script>
+</body>
+</html>

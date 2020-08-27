@@ -10,3 +10,6 @@ class Castle(models.Model):
     completed_blocks = models.IntegerField(default=0)
     banner_color = models.CharField(default='blue', max_length=25)
     last_modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.castle_name
