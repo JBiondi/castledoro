@@ -28,8 +28,6 @@ def user_profile(request):
     castles_queryset = Castle.objects.filter(associated_user_id_id=current_user.id).order_by('last_modified')
     castles_array = []
 
-    print(castles_array)
-
     for castle in castles_queryset:
         castles_array.append(castle)
 
