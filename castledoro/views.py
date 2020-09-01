@@ -42,3 +42,8 @@ def delete_castle(request):
     context = {'form': form}
 
     return render(request, 'frontend/delete_castle.html', context)
+
+
+@login_required
+def build_castle(request):
+    return render(request, 'frontend/build_castle.html')
