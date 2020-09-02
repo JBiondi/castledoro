@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./frontend/src/index.js?");
+eval("var timerHTML = document.querySelector('.timer');\n\nfunction timer(minutes) {\n  var seconds = minutes * 60;\n  var interval = setInterval(function () {\n    seconds--;\n    timerHTML.innerHTML = \"Seconds remaining: \".concat(seconds);\n\n    if (!seconds) {\n      clearInterval(interval);\n      alert(\"Complete!\");\n    }\n  }, 1000);\n}\n\ntimer(1);\n\n//# sourceURL=webpack:///./frontend/src/index.js?");
 
 /***/ })
 
