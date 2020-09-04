@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var timerHTML = document.querySelector('.timer');\n\nfunction timer(minutes) {\n  var seconds = minutes * 60;\n  var interval = setInterval(function () {\n    seconds--;\n    timerHTML.innerHTML = \"Seconds remaining: \".concat(seconds);\n\n    if (!seconds) {\n      clearInterval(interval);\n      alert(\"Complete!\");\n    }\n  }, 1000);\n}\n\ntimer(1);\n\n//# sourceURL=webpack:///./frontend/src/index.js?");
+eval("var timerHTML = document.querySelector('.timer');\n\nfunction timer(minutes) {\n  var hours = '00';\n  var seconds = 60;\n  var specialZero;\n  minutes--;\n\n  if (minutes > 60) {\n    hours = 60 / minutes;\n  }\n\n  var interval = setInterval(function () {\n    seconds--;\n\n    if (minutes < 10) {\n      specialZero = '0';\n    }\n\n    if (specialZero) {\n      timerHTML.innerHTML = \"\".concat(hours, \" : \").concat(specialZero).concat(minutes, \" : \").concat(seconds);\n    }\n\n    timerHTML.innerHTML = \"\".concat(hours, \" : \").concat(minutes, \" : \").concat(seconds);\n\n    if (!seconds) {\n      minutes--;\n      seconds = 60;\n    }\n\n    if (!seconds && !minutes) {\n      clearInterval(interval);\n      alert(\"Complete!\");\n    }\n  }, 1000);\n}\n\ntimer(10);\n\n//# sourceURL=webpack:///./frontend/src/index.js?");
 
 /***/ })
 
