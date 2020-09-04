@@ -15,29 +15,30 @@ function timer(minutes) {
 
         seconds--;
 
-        if (minutes < 10){
-            specialZero = '0';
+        if (minutes < 10) {
+            timerHTML.innerHTML = `${hours} : 0${minutes} : ${seconds}`;
         }
 
-        if (specialZero) {
-            timerHTML.innerHTML = `${hours} : ${specialZero}${minutes} : ${seconds}`;
+        else {
+            timerHTML.innerHTML = `${hours} : ${minutes} : ${seconds}`;
         }
 
-        timerHTML.innerHTML = `${hours} : ${minutes} : ${seconds}`;
+        if (!seconds && !minutes) {
+            clearInterval(interval);
+            alert("Complete!");
+        }
 
         if (!seconds) {
             minutes--;
             seconds = 60;
-        }
 
-
-
-        if (!seconds && !minutes) {
-            clearInterval(interval);
-            alert("Complete!")
+            if (minutes < 10){
+                specialZero = '0';
+            }
         }
     }, 1000)
 }
 
-timer(10);
+
+timer(11);
 
