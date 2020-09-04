@@ -3,7 +3,6 @@ const timerHTML = document.querySelector('.timer')
 function timer(minutes) {
     let hours = '00';
     let seconds = 60;
-    let specialZero;
 
     minutes--;
 
@@ -15,8 +14,12 @@ function timer(minutes) {
 
         seconds--;
 
-        if (minutes < 10) {
+        if (minutes < 10 && seconds > 10) {
             timerHTML.innerHTML = `${hours} : 0${minutes} : ${seconds}`;
+        }
+
+        else if (minutes < 10 && seconds < 10) {
+            timerHTML.innerHTML = `${hours} : 0${minutes} : 0${seconds}`;
         }
 
         else {
@@ -31,14 +34,10 @@ function timer(minutes) {
         if (!seconds) {
             minutes--;
             seconds = 60;
-
-            if (minutes < 10){
-                specialZero = '0';
-            }
         }
     }, 1000)
 }
 
 
-timer(11);
+timer(2);
 
