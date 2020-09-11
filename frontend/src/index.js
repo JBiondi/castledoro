@@ -1,4 +1,9 @@
 const timerHTML = document.querySelector('.timer')
+const minutesInput = document.querySelector('.timer-input')
+
+minutesInput.addEventListener('submit', runTimer);
+
+
 
 function timer(minutes) {
 
@@ -40,5 +45,7 @@ function timer(minutes) {
 }
 
 
-timer(12);
+function runTimer() {
+    timer(minutesInput);
+}
 
