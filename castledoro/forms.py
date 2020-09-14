@@ -16,3 +16,8 @@ class DeleteCastleForm(forms.ModelForm):
         fields = ['castle_name']
 
 
+class NewTimerForm(forms.BaseForm):
+    total_minutes = forms.IntegerField(required=True)
+
+
+

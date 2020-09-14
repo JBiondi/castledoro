@@ -16,4 +16,6 @@ urlpatterns = [
     path('create_new_castle/', castledoro_views.create_new_castle, name='create_castle_namespace'),
     path('delete_castle/', castledoro_views.delete_castle, name='delete_castle_namespace'),
     path('build_castle/', castledoro_views.build_castle, name='build_castle_namespace'),
+    path('get_minutes_api_endpoint/<int:requested_minutes>/', castledoro_views.timer_handler,
+         name='timer_handler_namespace'),
 ]

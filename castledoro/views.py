@@ -1,8 +1,12 @@
+import json
+
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .forms import NewCastleForm
 from .forms import DeleteCastleForm
+from .forms import NewTimerForm
 from .models import Castle
 
 
@@ -47,3 +51,14 @@ def delete_castle(request):
 @login_required
 def build_castle(request):
     return render(request, 'frontend/build_castle.html')
+
+
+def timer_handler(request, requested_minutes=None):
+    if request.method == 'POST':
+        form = NewTimerForm(request.POST)
+
+        if form.is_valid():
+            minutes = requested_minutes
+            json_minutes = json.dumps(minutes)
+
+            return HttpResponse(json_minutes, content_type='application/json')
