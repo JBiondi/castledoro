@@ -1,9 +1,10 @@
-const timerSubmit = document.querySelector('.timer-submit')
-const timerInput = document.querySelector('.timer-input')
-const timerDisplay = document.querySelector('.timer-display')
+const timerSubmit = document.querySelector('.timer-submit');
+const timerInput = document.querySelector('.timer-input');
+const timerDisplay = document.querySelector('.timer-display');
+const timerInputContainer = document.querySelector('.timer-input-container');
 
 
-timerSubmit.addEventListener('click', startTimer)
+timerSubmit.addEventListener('click', startTimer);
 
 
 function timer(minutes) {
@@ -47,8 +48,9 @@ function timer(minutes) {
 
 
 function startTimer() {
-    let minutes = timerInput.value
+    let minutes = timerInput.value;
     timer(minutes);
+    timerInputContainer.style.display = 'none';
 }
 
 

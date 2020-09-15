@@ -25,3 +25,7 @@ h1  {
 .nav-user-profile {
     padding: 10px;
 }
+
+.timer-input-container {
+    display: block;
+}
