@@ -2,9 +2,11 @@ const timerSubmit = document.querySelector('.timer-submit');
 const timerInput = document.querySelector('.timer-input');
 const timerDisplay = document.querySelector('.timer-display');
 const timerInputContainer = document.querySelector('.timer-input-container');
+const timerPauseButton = document.querySelector('timer-pause-button');
 
 
 timerSubmit.addEventListener('click', startTimer);
+timerPauseButton.addEventListener('click', pauseTimer);
 
 
 function timer(minutes) {
@@ -51,6 +53,11 @@ function startTimer() {
     let minutes = timerInput.value;
     timer(minutes);
     timerInputContainer.style.display = 'none';
+}
+
+
+function pauseTimer() {
+
 }
 
 
