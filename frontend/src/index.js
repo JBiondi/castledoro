@@ -1,4 +1,9 @@
-const timerHTML = document.querySelector('.timer')
+const timerSubmit = document.querySelector('.timer-submit')
+const timerInput = document.querySelector('.timer-input')
+const timerDisplay = document.querySelector('.timer-display')
+
+
+timerSubmit.addEventListener('click', startTimer)
 
 
 function timer(minutes) {
@@ -12,19 +17,19 @@ function timer(minutes) {
         seconds--;
 
         if (minutes < 10 && seconds > 10) {
-            timerHTML.innerHTML = `0${minutes} : ${seconds}`;
+            timerDisplay.innerHTML = `0${minutes} : ${seconds}`;
         }
 
         else if (minutes < 10 && seconds < 10) {
-            timerHTML.innerHTML = `0${minutes} : 0${seconds}`;
+            timerDisplay.innerHTML = `0${minutes} : 0${seconds}`;
         }
 
         else if (minutes > 10 && seconds < 10) {
-            timerHTML.innerHTML = `${minutes} : 0${seconds}`;
+            timerDisplay.innerHTML = `${minutes} : 0${seconds}`;
         }
 
         else {
-            timerHTML.innerHTML = `${minutes} : ${seconds}`;
+            timerDisplay.innerHTML = `${minutes} : ${seconds}`;
         }
 
         if (!seconds && !minutes) {
@@ -41,9 +46,9 @@ function timer(minutes) {
 }
 
 
-console.log(minutesInput)
-
-if (minutesInput) {
-    timer(minutesInput);
+function startTimer() {
+    let minutes = timerInput.value
+    timer(minutes);
 }
+
 
