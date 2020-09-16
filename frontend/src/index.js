@@ -4,9 +4,17 @@ const timerDisplay = document.querySelector('.timer-display');
 const timerInputContainer = document.querySelector('.timer-input-container');
 const timerPauseButton = document.querySelector('timer-pause-button');
 
+let currentSession = 0;
+let secondsRemaining = 0;
+
 
 timerSubmit.addEventListener('click', startTimer);
 timerPauseButton.addEventListener('click', pauseTimer);
+
+
+function decreaseTime() {
+
+}
 
 
 function timer(minutes) {
