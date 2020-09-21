@@ -1,71 +1,34 @@
-const timerSubmit = document.querySelector('.timer-submit');
-const timerInput = document.querySelector('.timer-input');
-const timerDisplay = document.querySelector('.timer-display');
-const timerInputContainer = document.querySelector('.timer-input-container');
-const timerPauseButton = document.querySelector('timer-pause-button');
+const startTimerButton = document.querySelector('.start-timer');
+const pauseTimerButton = document.querySelector('.pause-timer');
+const timerMinutes = document.querySelector('.minutes');
+const timerSeconds = document.querySelector('.seconds');
 
-let currentSession = 0;
-let secondsRemaining = 0;
+let startTimer;
+let sessions;
 
+startTimerButton.addEventListener('click', function() {
+    if (startTimer === undefined) {
+        startTimer = setInterval(runTimer, 1000)
+    }
+    else {
+        alert('The timer is already counting down')
+    }
+})
 
-timerSubmit.addEventListener('click', startTimer);
-timerPauseButton.addEventListener('click', pauseTimer);
+function runTimer() {
+    if(timerSeconds.innerText !== 0) {
+        timerSeconds.innerText--;
+    }
+    else if (timerMinutes.innerText !== 0 && timerSeconds.innerText === 0) {
+        timerSeconds.innerText = 59;
+        timerMinutes.innerText--;
+    }
 
-
-function decreaseTime() {
-
+    else if (timerMinutes.innerText === 0 && timerSeconds.innerText === 0) {
+        timerMinutes.innerText = 45;
+        timerSeconds.innerText = '00';
+        sessions++;
+        console.log(`Sessions completed is now: ${sessions}`)
+    }
 }
-
-
-function timer(minutes) {
-
-    let seconds = 60;
-
-    minutes--;
-
-    let interval = setInterval(function () {
-
-        seconds--;
-
-        if (minutes < 10 && seconds > 10) {
-            timerDisplay.innerHTML = `0${minutes} : ${seconds}`;
-        }
-
-        else if (minutes < 10 && seconds < 10) {
-            timerDisplay.innerHTML = `0${minutes} : 0${seconds}`;
-        }
-
-        else if (minutes > 10 && seconds < 10) {
-            timerDisplay.innerHTML = `${minutes} : 0${seconds}`;
-        }
-
-        else {
-            timerDisplay.innerHTML = `${minutes} : ${seconds}`;
-        }
-
-        if (!seconds && !minutes) {
-            clearInterval(interval);
-            alert("Complete!");
-        }
-
-        if (!seconds) {
-            minutes--;
-            seconds = 60;
-        }
-
-    }, 1000)
-}
-
-
-function startTimer() {
-    let minutes = timerInput.value;
-    timer(minutes);
-    timerInputContainer.style.display = 'none';
-}
-
-
-function pauseTimer() {
-
-}
-
 

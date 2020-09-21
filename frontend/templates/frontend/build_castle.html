@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Build your castle</title>
+    <title>Build a skill castle</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
 </head>
@@ -23,14 +23,12 @@
 
 <h1>Castle building area for {{ user.username }}</h1>
 
-<div class="timer-input-container">
-    <input type="text" placeholder="Enter minutes" class="timer-input">
-    <input type="submit" class="timer-submit">
+<div class="timer-container">
+    <div class="minutes">45</div><div class="colon">:</div><div class="seconds">00</div>
 </div>
 
-<div class="timer-display">00:00</div>
-<button class="timer-pause-button">Pause Timer</button>
-
+<button class="start-timer">Start</button>
+<button class="pause-timer">Pause</button>
 
 <script src="{% static "frontend/main.js" %}"></script>
 </body>

@@ -26,6 +26,29 @@ h1  {
     padding: 10px;
 }
 
-.timer-input-container {
-    display: block;
+.timer-container {
+    display: flex;
+    width: 5%;
+    justify-items: center;
+    background-color: cornflowerblue;
+    border: 2px solid crimson;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 10px;
+}
+
+
+.minutes {
+    flex: 1;
+    padding: 3px;
+}
+
+.colon {
+    flex: 1;
+    padding: 3px;
+}
+
+.seconds {
+    flex: 1;
+    padding: 3px;
 }
