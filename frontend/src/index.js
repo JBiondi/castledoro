@@ -4,7 +4,8 @@ const timerMinutes = document.querySelector('.minutes');
 const timerSeconds = document.querySelector('.seconds');
 
 let startTimer;
-let sessions;
+let sessions = 0;
+
 
 startTimerButton.addEventListener('click', function() {
     if (startTimer === undefined) {
@@ -15,20 +16,40 @@ startTimerButton.addEventListener('click', function() {
     }
 })
 
+
+pauseTimerButton.addEventListener('click', function() {
+    clearInterval(startTimer);
+    startTimer = undefined;
+    console.log('TIMER STAAHHHPPP')
+})
+
+
 function runTimer() {
-    if(timerSeconds.innerText !== 0) {
+
+    console.log("Running timer!")
+    const seconds = Number(timerSeconds.innerText);
+    const minutes = Number(timerMinutes.innerText);
+
+    console.log(minutes, seconds);
+
+    if (seconds !== 0) {
+        console.log('TIMER GO BRRRRR')
         timerSeconds.innerText--;
     }
-    else if (timerMinutes.innerText !== 0 && timerSeconds.innerText === 0) {
+
+    else if (minutes !== 0 && seconds === 0) {
+        console.log('HERE')
         timerSeconds.innerText = 59;
         timerMinutes.innerText--;
     }
 
-    else if (timerMinutes.innerText === 0 && timerSeconds.innerText === 0) {
-        timerMinutes.innerText = 45;
+    else if (minutes === 0 && seconds === 0) {
+        console.log('ENDED')
+        timerMinutes.innerText = '00';
         timerSeconds.innerText = '00';
         sessions++;
-        console.log(`Sessions completed is now: ${sessions}`)
+        console.log(`Sessions completed is now: ${sessions}`);
+        clearInterval(startTimer);
     }
 }
 
