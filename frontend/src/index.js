@@ -1,5 +1,6 @@
 const startTimerButton = document.querySelector('.start-timer');
 const pauseTimerButton = document.querySelector('.pause-timer');
+const resetTimerButton = document.querySelector('.reset-timer');
 const timerMinutes = document.querySelector('.minutes');
 const timerSeconds = document.querySelector('.seconds');
 
@@ -20,7 +21,16 @@ startTimerButton.addEventListener('click', function() {
 pauseTimerButton.addEventListener('click', function() {
     clearInterval(startTimer);
     startTimer = undefined;
-    console.log('TIMER STAAHHHPPP')
+    console.log('Timer paused)')
+})
+
+
+resetTimerButton.addEventListener('click', function () {
+    clearInterval(startTimer);
+    startTimer = undefined;
+    timerMinutes.innerText = 45;
+    timerSeconds.innerText = '00';
+    console.log('Timer has been reset')
 })
 
 
@@ -33,12 +43,11 @@ function runTimer() {
     console.log(minutes, seconds);
 
     if (seconds !== 0) {
-        console.log('TIMER GO BRRRRR')
+        console.log('Timer goin')
         timerSeconds.innerText--;
     }
 
     else if (minutes !== 0 && seconds === 0) {
-        console.log('HERE')
         timerSeconds.innerText = 59;
         timerMinutes.innerText--;
     }
