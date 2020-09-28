@@ -5,7 +5,7 @@ const timerMinutes = document.querySelector('.minutes');
 const timerSeconds = document.querySelector('.seconds');
 
 let startTimer;
-let sessions = 0;
+let newSessions = 0;
 
 
 startTimerButton.addEventListener('click', function() {
@@ -56,9 +56,8 @@ function runTimer() {
         console.log('ENDED')
         timerMinutes.innerText = '00';
         timerSeconds.innerText = '00';
-        sessions++;
-        console.log(`Sessions completed is now: ${sessions}`);
+        newSessions++;
+        console.log(`Sessions completed is now: ${newSessions}`);
         clearInterval(startTimer);
     }
 }
-
