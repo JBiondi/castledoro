@@ -23,13 +23,19 @@
 
 <h1>Castle building area for {{ user.username }}</h1>
 
+<div class="castle-progress-image">
+    <img src="{% static '/img/temp_castle.jpg' %}" alt=""/>
+</div>
+
 <div class="timer-container">
     <div class="minutes">2</div><div class="colon">:</div><div class="seconds">00</div>
 </div>
 
-<button class="start-timer">Start</button>
-<button class="reset-timer">Reset</button>
-<button class="pause-timer">Pause</button>
+<div class="timer-buttons-container">
+    <button class="start-timer">Start</button>
+    <button class="reset-timer">Reset</button>
+    <button class="pause-timer">Pause</button>
+</div>
 
 <script src="{% static "frontend/main.js" %}"></script>
 </body>

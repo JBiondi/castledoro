@@ -34,9 +34,16 @@ h1  {
     border: 2px solid crimson;
     border-radius: 3px;
     padding: 3px;
-    margin: 10px;
+    margin-left: 77%;
+    margin-bottom: 10px;
+    margin-top: 12%;
 }
 
+.timer-buttons-container {
+    display: flex;
+    margin-left: 73%;
+    padding: 5px;
+}
 
 .minutes {
     flex: 1;
@@ -45,10 +52,15 @@ h1  {
 
 .colon {
     flex: 1;
-    padding: 3px;
+    padding: 1px;
 }
 
 .seconds {
     flex: 1;
     padding: 3px;
+}
+
+.castle-progress-image {
+    height: 200px;
+    width: 200px;
 }
