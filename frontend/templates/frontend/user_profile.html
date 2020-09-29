@@ -26,6 +26,8 @@
 <h2>My Castles:</h2>
 {% for castle in castles %}
     <p>The name of this castle is: {{ castle.castle_name }}</p>
+    <button class="delete-link">Delete this castle</button>
+    <button class="progress-link">Make progress on this castle</button>
 {% endfor %}
 
 
