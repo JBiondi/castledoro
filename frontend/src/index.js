@@ -8,30 +8,35 @@ let startTimer;
 let newSessions = 0;
 
 
-startTimerButton.addEventListener('click', function() {
-    if (startTimer === undefined) {
-        startTimer = setInterval(runTimer, 1000)
-    }
-    else {
-        alert('The timer is already counting down')
-    }
-})
+if (startTimerButton) {
+    startTimerButton.addEventListener('click', function () {
+        if (startTimer === undefined) {
+            startTimer = setInterval(runTimer, 1000)
+        } else {
+            alert('The timer is already counting down')
+        }
+    })
+}
 
 
-pauseTimerButton.addEventListener('click', function() {
-    clearInterval(startTimer);
-    startTimer = undefined;
-    console.log('Timer paused)')
-})
+if (pauseTimerButton) {
+    pauseTimerButton.addEventListener('click', function() {
+        clearInterval(startTimer);
+        startTimer = undefined;
+        console.log('Timer paused)')
+    })
+}
 
 
-resetTimerButton.addEventListener('click', function () {
-    clearInterval(startTimer);
-    startTimer = undefined;
-    timerMinutes.innerText = 45;
-    timerSeconds.innerText = '00';
-    console.log('Timer has been reset')
-})
+if (resetTimerButton) {
+    resetTimerButton.addEventListener('click', function () {
+        clearInterval(startTimer);
+        startTimer = undefined;
+        timerMinutes.innerText = 45;
+        timerSeconds.innerText = '00';
+        console.log('Timer has been reset')
+    })
+}
 
 
 function runTimer() {
