@@ -27,8 +27,8 @@
 {% for castle in castles %}
     <p>The name of this castle is: {{ castle.castle_name }}</p>
     <img src="{% static '/img/temp_castle.jpg' %}" alt="" class="castle-profile-image"/>
-    <button id={{ castle.castle_id }} class="delete-link">Delete {{ castle.castle_name }}</button>
-    <button id={{ castle.castle_id }} class="progress-link">Make progress on {{ castle.castle_name }}</button>
+    <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
+    <button onclick="location.href = '/make_progress_on_existing_castle'">Make progress on {{ castle.castle_name }}</button>
 {% endfor %}
 
 

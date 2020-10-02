@@ -3,8 +3,6 @@ const pauseTimerButton = document.querySelector('.pause-timer');
 const resetTimerButton = document.querySelector('.reset-timer');
 const timerMinutes = document.querySelector('.minutes');
 const timerSeconds = document.querySelector('.seconds');
-const deleteLink = document.querySelector('.delete-link');
-const progressLink = document.querySelector('.progress-link');
 
 let startTimer;
 let newSessions = 0;
@@ -37,20 +35,6 @@ if (resetTimerButton) {
         timerMinutes.innerText = 45;
         timerSeconds.innerText = '00';
         console.log('Timer has been reset')
-    })
-}
-
-
-if (deleteLink) {
-    deleteLink.addEventListener('click', function () {
-        // navigate to delete castle page with Castle instance
-    })
-}
-
-
-if (progressLink) {
-    progressLink.addEventListener('click', function () {
-        // navigate to progress page with Castle instance
     })
 }
 
