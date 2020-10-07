@@ -46,4 +46,5 @@ def delete_castle(request):
 
 @login_required
 def make_progress_on_existing_castle(request):
+    print(request.GET['castle'])
     return render(request, 'frontend/make_progress_on_existing_castle.html')
