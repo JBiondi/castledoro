@@ -46,5 +46,15 @@ def delete_castle(request):
 
 @login_required
 def make_progress_on_existing_castle(request):
-    print(request.GET['castle'])
-    return render(request, 'frontend/make_progress_on_existing_castle.html')
+    requested_castle_id = request.GET['castle']
+
+    castle_in_progress = Castle.objects.get(castle_id=requested_castle_id)
+    print(f'Heres some info about this castle: Castle Name: {castle_in_progress.castle_name}, '
+          f'Castle ID: {castle_in_progress.castle_id}, '
+          f'Total Blocks: {castle_in_progress.total_blocks},'
+          f'Completed Blocks: {castle_in_progress.completed_blocks}',
+          f'Banner Color: {castle_in_progress.banner_color}')
+
+    context = {'castle_in_progress': castle_in_progress}
+
+    return render(request, 'frontend/make_progress_on_existing_castle.html', context)
