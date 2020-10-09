@@ -38,6 +38,16 @@ if (resetTimerButton) {
     })
 }
 
+function getCookie(flavor) {
+    const allCookies = document.cookie.split(';');
+    const trimmedCookies = allCookies.map(cookie => cookie.trim())
+    const matchingCookie = trimmedCookies.find(cookie => cookie.startsWith(flavor + '='));
+
+    return matchingCookie.split('=')[1];
+}
+
+const csrftoken = getCookie('csrftoken');
+
 
 function runTimer() {
 
@@ -63,6 +73,22 @@ function runTimer() {
         timerSeconds.innerText = '00';
         newSessions++;
         console.log(`Sessions completed is now: ${newSessions}`);
+        updateCastleBlocks();
         clearInterval(startTimer);
     }
+}
+
+
+function updateCastleBlocks() {
+
+    fetch(`http://127.0.0.1:8000/session_completed_api_endpoint/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken,
+        }
+    })
+        .then(response => {
+            return response.json();
+        })
 }

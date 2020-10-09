@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect
 from .forms import NewCastleForm
@@ -46,15 +47,17 @@ def delete_castle(request):
 
 @login_required
 def make_progress_on_existing_castle(request):
-    requested_castle_id = request.GET['castle']
 
+    requested_castle_id = request.GET['castle']
     castle_in_progress = Castle.objects.get(castle_id=requested_castle_id)
-    print(f'Heres some info about this castle: Castle Name: {castle_in_progress.castle_name}, '
-          f'Castle ID: {castle_in_progress.castle_id}, '
-          f'Total Blocks: {castle_in_progress.total_blocks},'
-          f'Completed Blocks: {castle_in_progress.completed_blocks}',
-          f'Banner Color: {castle_in_progress.banner_color}')
 
     context = {'castle_in_progress': castle_in_progress}
 
     return render(request, 'frontend/make_progress_on_existing_castle.html', context)
+
+
+@login_required
+def session_completed_api_endpoint(request):
+    if request.method == 'POST':
+        print('yeet')
+        return HttpResponse(content_type='application/json')
