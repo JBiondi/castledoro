@@ -47,11 +47,11 @@ def delete_castle(request):
 
 @login_required
 def make_progress_on_existing_castle(request):
-
     requested_castle_id = request.GET['castle']
     castle_in_progress = Castle.objects.get(castle_id=requested_castle_id)
+    request.session['progress_id'] = requested_castle_id
 
-    context = {'castle_in_progress': castle_in_progress}
+    context = {'castle_in_progress': castle_in_progress, 'castle_id': requested_castle_id}
 
     return render(request, 'frontend/make_progress_on_existing_castle.html', context)
 
@@ -59,5 +59,6 @@ def make_progress_on_existing_castle(request):
 @login_required
 def session_completed_api_endpoint(request):
     if request.method == 'POST':
-        print('yeet')
-        return HttpResponse(content_type='application/json')
+        print(request.session['progress_id'])
+
+        return HttpResponse(status=204)
