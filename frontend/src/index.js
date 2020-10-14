@@ -80,14 +80,10 @@ function runTimer() {
 
 
 function updateCastleBlocks() {
-
     fetch(`http://127.0.0.1:8000/session_completed_api_endpoint/`, {
         method: 'POST',
         headers: {
             'X-CSRFToken': csrftoken,
         }
     })
-        .then(response => {
-            return response.json();
-        })
 }
