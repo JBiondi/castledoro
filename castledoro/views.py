@@ -59,6 +59,15 @@ def make_progress_on_existing_castle(request):
 @login_required
 def session_completed_api_endpoint(request):
     if request.method == 'POST':
-        print(request.session['progress_id'])
+        relevant_id = request.session['progress_id']
+        relevant_castle = Castle.objects.get(castle_id=relevant_id)
+
+        if relevant_castle.completed_blocks < relevant_castle.total_blocks:
+            print(f'Completed blocks is currently {relevant_castle.completed_blocks}')
+            relevant_castle.completed_blocks += 1
+            print(f'Completed blocks is now {relevant_castle.completed_blocks}')
+
+        else:
+            print('Castle complete!')
 
         return HttpResponse(status=204)
