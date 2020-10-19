@@ -1,7 +1,9 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.shortcuts import redirect
+from django.urls import reverse
+
 from .forms import NewCastleForm
 from .forms import DeleteCastleForm
 from .models import Castle
@@ -65,9 +67,10 @@ def session_completed_api_endpoint(request):
         if relevant_castle.completed_blocks < relevant_castle.total_blocks:
             print(f'Completed blocks is currently {relevant_castle.completed_blocks}')
             relevant_castle.completed_blocks += 1
+            relevant_castle.save()
             print(f'Completed blocks is now {relevant_castle.completed_blocks}')
 
         else:
             print('Castle complete!')
 
-        return HttpResponse(status=204)
+        return redirect('progress_namespace')
