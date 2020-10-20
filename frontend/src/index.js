@@ -3,6 +3,7 @@ const pauseTimerButton = document.querySelector('.pause-timer');
 const resetTimerButton = document.querySelector('.reset-timer');
 const timerMinutes = document.querySelector('.minutes');
 const timerSeconds = document.querySelector('.seconds');
+const completedBlocks = document.querySelector('.completed-blocks');
 
 let startTimer;
 let newSessions = 0;
@@ -83,7 +84,15 @@ function updateCastleBlocks() {
     fetch(`http://127.0.0.1:8000/session_completed_api_endpoint/`, {
         method: 'POST',
         headers: {
+            'Content-Type': 'application/json',
             'X-CSRFToken': csrftoken,
         }
     })
+    .then(response => {
+            return response.json();
+        })
+    .then(function updateBlocksHTML (data) {
+            console.log(`This is the data ${data}`);
+            completedBlocks.innerHTML = `Completed Blocks: ${JSON.stringify(data)}`;
+        })
 }

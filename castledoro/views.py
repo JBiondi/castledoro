@@ -1,3 +1,5 @@
+import json
+
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -73,4 +75,7 @@ def session_completed_api_endpoint(request):
         else:
             print('Castle complete!')
 
-        return redirect('progress_namespace')
+        completed_blocks = relevant_castle.completed_blocks
+        json_completed_blocks = json.dumps(completed_blocks)
+
+        return HttpResponse(json_completed_blocks, content_type='application/json')
