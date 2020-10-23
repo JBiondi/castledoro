@@ -26,10 +26,14 @@ def user_registration(request):
 def user_profile(request):
     current_user = request.user
     castles_queryset = Castle.objects.filter(associated_user_id_id=current_user.id).order_by('last_modified')
-    castles_array = []
+    current_castles_array = []
+    completed_castles_array = []
 
     for castle in castles_queryset:
-        castles_array.append(castle)
+        if castle.completed_blocks < castle.total_blocks:
+            current_castles_array.append(castle)
+        else:
+            completed_castles_array.append(castle)
 
-    context = {'castles': castles_array}
+    context = {'current_castles': current_castles_array, 'completed_castles': completed_castles_array}
     return render(request, 'frontend/user_profile.html', context)

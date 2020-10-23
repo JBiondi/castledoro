@@ -23,14 +23,20 @@
 
 <h1>User Profile area for {{ user.username }}</h1>
 
-<h2>My Castles:</h2>
-{% for castle in castles %}
+<h2>Currently in Progress Castles:</h2>
+{% for castle in current_castles %}
     <p>The name of this castle is: {{ castle.castle_name }}</p>
     <img src="{% static '/img/temp_castle.jpg' %}" alt="" class="castle-profile-image"/>
     <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
     <button onclick="location.href = '/make_progress_on_existing_castle?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
 {% endfor %}
 
+<h2>Completed Castles:</h2>
+{% for castle in completed_castles %}
+    <p>The name of this castle is: {{ castle.castle_name }}</p>
+    <img src="{% static '/img/temp_castle.jpg' %}" alt="" class="castle-profile-image"/>
+    <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
+{% endfor %}
 
 <script src="{% static "frontend/main.js" %}"></script>
 </body>
