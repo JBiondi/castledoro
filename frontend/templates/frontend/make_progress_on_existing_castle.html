@@ -25,12 +25,14 @@
 
 <img src="{% static '/img/temp_castle.jpg' %}" alt="" class="castle-progress-image"/>
 
+<input type="text" placeholder="Enter minutes" class="minutes-input">
+<input type="submit" class="timer-submit">
+
 <div class="timer-container">
-    <div class="minutes">0</div><div class="colon">:</div><div class="seconds">5</div>
+    <div class="minutes-display"></div><div class="colon">:</div><div class="seconds-display">0</div>
 </div>
 
 <div class="timer-buttons-container">
-    <button class="start-timer">Start</button>
     <button class="reset-timer">Reset</button>
     <button class="pause-timer">Pause</button>
 </div>
