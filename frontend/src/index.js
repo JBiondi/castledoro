@@ -16,7 +16,10 @@ let newSessions = 0;
 if (timerSubmit) {
     timerSubmit.addEventListener('click', function () {
         if (startTimer === undefined) {
+            minutesDisplay.innerText = minutesInput.value;
+            console.log(`MD = ${minutesDisplay.innerText}`)
             startTimer = setInterval(runTimer, 1000)
+
         } else {
             alert('The timer is already counting down')
         }
@@ -57,23 +60,22 @@ const csrftoken = getCookie('csrftoken');
 function runTimer() {
 
     console.log("Running timer!")
+
     const seconds = Number(secondsDisplay.innerText);
-    const minutes = minutesInput.value;
-    console.log(`minutes input is currently ${minutesInput}`)
 
-    console.log(minutes, seconds);
+    console.log(minutesDisplay.innerText, seconds);
 
-    if (seconds !== 0) {
-        console.log('Timer goin')
+    if (minutesDisplay.innerText != 0 && seconds === 0) {
+        secondsDisplay.innerText = 59;
+        minutesDisplay.innerText--;
+        console.log(`Did we decrement? ${minutesDisplay.innerText}`)
+    }
+
+    else if (minutesDisplay.innerText !==0 && seconds !== 0) {
         secondsDisplay.innerText--;
     }
 
-    else if (minutes !== 0 && seconds === 0) {
-        secondsDisplay.innerText = 59;
-        minutesDisplay.innerText--;
-    }
-
-    else if (minutes === 0 && seconds === 0) {
+    else if (minutesDisplay.innerText == 0 && seconds === 0) {
         console.log('ENDED')
         minutesDisplay.innerText = '00';
         secondsDisplay.innerText = '00';
