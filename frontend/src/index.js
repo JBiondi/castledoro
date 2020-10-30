@@ -6,6 +6,8 @@ const timerSubmit = document.querySelector('.timer-submit');
 
 const minutesDisplay = document.querySelector('.minutes-display');
 const secondsDisplay = document.querySelector('.seconds-display');
+const extraZero = document.querySelector('.extra-zero');
+
 const completedBlocks = document.querySelector('.completed-blocks');
 
 
@@ -65,17 +67,25 @@ function runTimer() {
 
     console.log(minutesDisplay.innerText, seconds);
 
+    if (seconds < 10 && seconds > 0) {
+        console.log('Ever here?')
+        extraZero.style.display = 'block';
+    }
+
     if (minutesDisplay.innerText != 0 && seconds === 0) {
+        extraZero.style.display = 'none';
         secondsDisplay.innerText = 59;
         minutesDisplay.innerText--;
         console.log(`Did we decrement? ${minutesDisplay.innerText}`)
     }
 
     else if (minutesDisplay.innerText !==0 && seconds !== 0) {
+        extraZero.style.display = 'none';
         secondsDisplay.innerText--;
     }
 
     else if (minutesDisplay.innerText == 0 && seconds === 0) {
+        extraZero.style.display = 'none';
         console.log('ENDED')
         minutesDisplay.innerText = '00';
         secondsDisplay.innerText = '00';

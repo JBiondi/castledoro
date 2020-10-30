@@ -55,6 +55,10 @@ h1  {
     padding: 1px;
 }
 
+.extra-zero {
+    display: none;
+}
+
 .seconds {
     flex: 1;
     padding: 3px;
