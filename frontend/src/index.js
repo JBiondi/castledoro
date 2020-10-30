@@ -7,6 +7,8 @@ const timerSubmit = document.querySelector('.timer-submit');
 const minutesDisplay = document.querySelector('.minutes-display');
 const secondsDisplay = document.querySelector('.seconds-display');
 const secondsExtraZero = document.querySelector('.seconds-extra-zero');
+const minutesExtraZero = document.querySelector('.minutes-extra-zero');
+
 const completedBlocks = document.querySelector('.completed-blocks');
 
 
@@ -59,7 +61,6 @@ const csrftoken = getCookie('csrftoken');
 
 
 function runTimer() {
-
     console.log("Running timer!")
 
     const seconds = Number(secondsDisplay.innerText);
@@ -67,25 +68,53 @@ function runTimer() {
     console.log(minutesDisplay.innerText, seconds);
 
     if (minutesDisplay.innerText != 0 && seconds === 0) {
-        secondsExtraZero.style.display = 'none';
-        secondsDisplay.innerText = 59;
-        minutesDisplay.innerText--;
-        console.log(`Did we decrement? ${minutesDisplay.innerText}`)
+
+        if (minutesDisplay.innerText < 10) {
+            minutesExtraZero.style.display = 'block';
+            secondsExtraZero.style.display = 'none';
+            secondsDisplay.innerText = 59;
+            minutesDisplay.innerText--;
+        }
+
+        else {
+            secondsExtraZero.style.display = 'none';
+            secondsDisplay.innerText = 59;
+            minutesDisplay.innerText--;
+        }
+
     }
 
     else if (minutesDisplay.innerText !==0 && seconds !== 0) {
-        if (secondsDisplay.innerText < 11) {
-            console.log('Triggered?')
-            secondsExtraZero.style.display = 'block'
-            secondsDisplay.innerText--;
+
+        if (minutesDisplay.innerText < 10) {
+            minutesExtraZero.style.display = 'block';
+
+            if (secondsDisplay.innerText < 11) {
+                secondsExtraZero.style.display = 'block';
+                secondsDisplay.innerText--;
+            }
+
+            else {
+                secondsDisplay.innerText--;
+            }
         }
+
         else {
-            secondsDisplay.innerText--;
+
+            if (secondsDisplay.innerText < 11) {
+                secondsExtraZero.style.display = 'block';
+                secondsDisplay.innerText--;
+            }
+
+            else {
+                secondsDisplay.innerText--;
+            }
         }
     }
 
     else if (minutesDisplay.innerText == 0 && seconds === 0) {
-        console.log('ENDED')
+        console.log('ENDED');
+        minutesExtraZero.style.display = 'none';
         secondsExtraZero.style.display = 'none';
         minutesDisplay.innerText = '00';
         secondsDisplay.innerText = '00';

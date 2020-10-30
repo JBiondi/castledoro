@@ -55,7 +55,11 @@ h1  {
     padding: 1px;
 }
 
-.extra-zero {
+.seconds-extra-zero {
+    display: none;
+}
+
+.minutes-extra-zero {
     display: none;
 }
 
