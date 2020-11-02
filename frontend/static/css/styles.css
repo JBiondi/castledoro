@@ -45,6 +45,16 @@ h1  {
     padding: 5px;
 }
 
+.minutes-input {
+    display: flex;
+    margin-left: 70%;
+}
+
+.timer-submit {
+    display: flex;
+    margin-left: 75%;
+}
+
 .minutes {
     flex: 1;
     padding: 3px;
@@ -52,7 +62,8 @@ h1  {
 
 .colon {
     flex: 1;
-    padding: 1px;
+    padding-left: 6px;
+    padding-right: 4px;
 }
 
 .seconds-extra-zero {
@@ -76,4 +87,14 @@ h1  {
 .castle-profile-image {
     height: 50px;
     width: 50px;
+}
+
+.block-container {
+    display: flex;
+}
+
+.block {
+    fill: orange;
+    stroke-width: .1px;
+    stroke: black;
 }
