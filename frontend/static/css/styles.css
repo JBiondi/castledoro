@@ -36,7 +36,7 @@ h1  {
     padding: 3px;
     margin-left: 77%;
     margin-bottom: 10px;
-    margin-top: 12%;
+    margin-top: 5px;
 }
 
 .timer-buttons-container {
@@ -48,11 +48,13 @@ h1  {
 .minutes-input {
     display: flex;
     margin-left: 70%;
+    margin-top: 200px;
 }
 
 .timer-submit {
     display: flex;
     margin-left: 75%;
+    margin-top: 5px;
 }
 
 .minutes {

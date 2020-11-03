@@ -10,6 +10,9 @@ const secondsExtraZero = document.querySelector('.seconds-extra-zero');
 const minutesExtraZero = document.querySelector('.minutes-extra-zero');
 
 const completedBlocks = document.querySelector('.completed-blocks');
+const block3 = document.querySelector('.block3');
+
+const blocksArray = [block3]
 
 
 let startTimer;
@@ -140,5 +143,11 @@ function updateCastleBlocks() {
     .then(function updateBlocksHTML (data) {
             console.log(`This is the data ${data}`);
             completedBlocks.innerHTML = `Completed Blocks: ${JSON.stringify(data)}`;
+
+            blocksArray.forEach(block => {
+                if (block.classList.contains(`block${data}`)) {
+                        block.style.fill = 'green';
+                }
+            });
         })
 }
