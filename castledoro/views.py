@@ -1,10 +1,9 @@
 import json
 
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import redirect
-from django.urls import reverse
 
 from .forms import NewCastleForm
 from .forms import DeleteCastleForm
@@ -55,7 +54,8 @@ def make_progress_on_existing_castle(request):
     castle_in_progress = Castle.objects.get(castle_id=requested_castle_id)
     request.session['progress_id'] = requested_castle_id
 
-    context = {'castle_in_progress': castle_in_progress, 'castle_id': requested_castle_id}
+    context = {'castle_in_progress': castle_in_progress, 'castle_id': requested_castle_id,
+               'range': range(castle_in_progress.completed_blocks)}
 
     return render(request, 'frontend/make_progress_on_existing_castle.html', context)
 
