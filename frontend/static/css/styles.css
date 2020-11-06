@@ -28,13 +28,13 @@ h1  {
 
 .timer-container {
     display: flex;
-    width: 5%;
+    width: 7%;
     justify-items: center;
     background-color: cornflowerblue;
     border: 2px solid crimson;
     border-radius: 3px;
     padding: 3px;
-    margin-left: 77%;
+    margin-left: 75%;
     margin-bottom: 10px;
     margin-top: 5px;
 }
@@ -48,7 +48,7 @@ h1  {
 .minutes-input {
     display: flex;
     margin-left: 70%;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 .timer-submit {

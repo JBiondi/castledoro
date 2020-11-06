@@ -24,32 +24,23 @@
 <h1>Castle progress area for {{ user.username }}</h1>
 
 
-<input type="text" placeholder="Enter minutes" class="minutes-input">
-<input type="submit" class="timer-submit">
+<input type="text" placeholder="Enter minutes" class="minutes-input"> <input type="submit" class="timer-submit">
+
 
 <div class="timer-container">
     <div class="minutes-extra-zero">0</div><div class="minutes-display">00</div><div class="colon">:</div><div class="seconds-extra-zero">0</div><div class="seconds-display">00</div>
 </div>
-
-{#<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg" class="block-container">#}
-{#    <rect class="block" x="15" y="1" width="4" height="4" rx=".5"></rect>#}
-{#    <rect class="block" x="12.5" y="6"  width="4" height="4" rx=".5"></rect><rect x="17.5" y="6"  class="block" width="4" height="4" rx=".5"></rect>#}
-{#    <rect class="block block1" x="10"  y="11" width="4" height="4" rx=".5"></rect><rect x="15"  y="11" class="block block2" width="4" height="4" rx=".5"></rect><rect class="block block3" x="20"  y="11"  width="4" height="4" rx=".5"></rect>#}
-{#</svg>#}
-
 
 <div class="timer-buttons-container">
     <button class="reset-timer">Reset</button>
     <button class="pause-timer">Pause</button>
 </div>
 
-
-{% for i in range %}
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="block-container">
-        <rect class="block" x="15" y="1" width="4" height="4" rx=".5"></rect>
-    </svg>
-{% endfor %}
-
+<svg viewBox="0 0 220 30" xmlns="http://www.w3.org/2000/svg" class="block-container">
+    <rect class="block" x="15" y="1" width="4" height="4" rx=".5"></rect>
+    <rect class="block" x="12.5" y="6"  width="4" height="4" rx=".5"></rect><rect x="17.5" y="6"  class="block" width="4" height="4" rx=".5"></rect>
+    <rect class="block block1" x="10"  y="11" width="4" height="4" rx=".5"></rect><rect x="15"  y="11" class="block block2" width="4" height="4" rx=".5"></rect><rect class="block block3" x="20"  y="11"  width="4" height="4" rx=".5"></rect>
+</svg>
 
 <div class="progress-castle-info">
     <div class="castle-name">Name: {{ castle_in_progress.castle_name }}</div>
