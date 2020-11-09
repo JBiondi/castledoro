@@ -26,6 +26,13 @@ h1  {
     padding: 10px;
 }
 
+.svg-flex-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
 .timer-container {
     display: flex;
     width: 7%;
@@ -96,7 +103,12 @@ h1  {
 }
 
 .block {
-    fill: orange;
+    fill: thistle;
     stroke-width: .1px;
     stroke: black;
 }
+
+.current-block {
+    fill: crimson;
+}
+
