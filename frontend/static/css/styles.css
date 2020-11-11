@@ -1,3 +1,7 @@
+body {
+    height: 100%;
+}
+
 h1  {
     color: fuchsia;
     text-align: center;
@@ -26,9 +30,7 @@ h1  {
     padding: 10px;
 }
 
-.svg-flex-container {
-    display: flex;
-    flex-direction: column;
+.svg-container {
     margin-bottom: 20px;
 }
 
@@ -88,18 +90,9 @@ h1  {
     padding: 3px;
 }
 
-.castle-progress-image {
-    height: 150px;
-    width: 150px;
-}
-
 .castle-profile-image {
     height: 50px;
     width: 50px;
-}
-
-.block-container {
-    display: flex;
 }
 
 .block {
@@ -110,5 +103,24 @@ h1  {
 
 .current-block {
     fill: crimson;
+}
+
+.main-container {
+    display: flex;
+    width: 20%;
+    height: 80vh;
+}
+
+svg {
+    position: absolute;
+    max-height: 60%;
+    max-width: 60%;
+    min-height: 0;
+    justify-content: flex-start;
+}
+
+.progress-castle-info {
+    margin-top: 10px;
+    justify-content: flex-end;
 }
 

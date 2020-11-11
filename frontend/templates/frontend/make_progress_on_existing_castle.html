@@ -24,126 +24,136 @@
 <h1>Castle progress area for {{ user.username }}</h1>
 
 
-<input type="text" placeholder="Enter minutes" class="minutes-input"> <input type="submit" class="timer-submit">
+<div class="main-container">
 
+    <svg viewBox="0 0 100 82" xmlns="http://www.w3.org/2000/svg" class="block-container">
 
-<div class="timer-container">
-    <div class="minutes-extra-zero">0</div><div class="minutes-display">00</div><div class="colon">:</div><div class="seconds-extra-zero">0</div><div class="seconds-display">00</div>
+            {#Row1#}
+            <rect class="block" x="17" y="16"  width="4" height="4" rx=".5"></rect><rect class="block" x="88" y="16"  width="4" height="4" rx=".5"></rect>
+
+            {#Row2#}
+            <rect class="block" x="14.5" y="21"  width="4" height="4" rx=".5"></rect><rect class="block" x="19.5" y="21"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="85.5" y="21"  width="4" height="4" rx=".5"></rect><rect class="block" x="90.5" y="21"  width="4" height="4" rx=".5"></rect>
+
+            {#Row3 #}
+            <rect class="block" x="12.5" y="26"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="26"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="22.5" y="26"  width="4" height="4" rx=".5"></rect><rect class="block" x="42.5" y="26"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="52.5" y="26"  width="4" height="4" rx=".5"></rect><rect class="block" x="62.5" y="26"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="82.5" y="26"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="26"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="26"  width="4" height="4" rx=".5"></rect>
+
+            {#Row4#}
+            <rect class="block" x="10" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="15" y="31"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="20" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="25" y="31"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="42.5" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="31"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="52.5" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5" y="31"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="62.5" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="80.5" y="31"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="85.25" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="90" y="31"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="95" y="31"  width="4" height="4" rx=".5"></rect>
+
+            {#Row5#}
+            <rect class="block" x="12.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="36"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="22.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="42.5" y="36"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="47.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="52.5" y="36"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="57.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="62.5" y="36"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="82.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="36"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="36"  width="4" height="4" rx=".5"></rect>
+
+            {#Row6#}
+            <rect class="block" x="12.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="41"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="22.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="42.5" y="41"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="47.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="52.5" y="41"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="57.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="62.5" y="41"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="82.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="41"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="41"  width="4" height="4" rx=".5"></rect>
+
+            {#Row7#}
+            <rect class="block" x="12.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="46"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="22.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="37.5" y="46"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="42.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="46"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="52.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5" y="46"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="62.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="67.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="82.5" y="46"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="87.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="92.5" y="46"  width="4" height="4" rx=".5"></rect>
+
+            {#Row8#}
+            <rect class="block" x="12.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="22.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="27.5"  y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="32.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="37.5"  y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="42.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="52.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5"  y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="62.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="67.5"  y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="72.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="77.5"  y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="82.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="51"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="51"  width="4" height="4" rx=".5"></rect>
+
+            {#Row9#}
+            <rect class="block" x="12.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="22.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="27.5" y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="32.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="37.5" y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="42.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="52.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5"  y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="62.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="67.5"  y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="72.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="77.5"  y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="82.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="56"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="56"  width="4" height="4" rx=".5"></rect>
+
+            {#Row10#}
+            <rect class="block block16" x="12.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block17" x="17.5"  y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block18" x="22.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block19" x="27.5"  y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block20" x="32.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block21" x="37.5"  y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block22" x="42.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block23" x="47.5"  y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block24" x="52.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block25" x="57.5"  y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block26" x="62.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block27" x="67.5"  y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block28" x="72.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block29" x="77.5"  y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block30" x="82.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="61"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="87.5" y="61"  width="4" height="4" rx=".5"></rect><rect class="block" x="92.5" y="61"  width="4" height="4" rx=".5"></rect>
+
+            {#Row11#}
+            <rect class="block block1"  x="12.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block2" x="17.5"  y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block3"  x="22.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block4" x="27.5"  y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block5"  x="32.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block6" x="37.5"  y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block7"  x="42.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block8" x="47.5"  y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block9"  x="52.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block10" x="57.5"  y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block11" x="62.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block11" x="67.5"  y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block13" x="72.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block12" x="77.5"  y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block15" x="82.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="66"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="66"  width="4" height="4" rx=".5"></rect>
+
+            {#Row12#}
+            <rect class="block block1"  x="12.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block2" x="17.5"  y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block3"  x="22.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block4" x="27.5"  y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block5"  x="32.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block6" x="37.5"  y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block7"  x="42.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block8" x="47.5"  y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block9"  x="52.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block10" x="57.5"  y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block11" x="62.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block11" x="67.5"  y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block13" x="72.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block12" x="77.5"  y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block15" x="82.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="71"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="71"  width="4" height="4" rx=".5"></rect>
+
+            {#Row13#}
+            <rect class="block block1"  x="12.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block2" x="17.5"  y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block3"  x="22.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block4" x="27.5"  y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block5"  x="32.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block6" x="37.5"  y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block7"  x="42.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block8" x="47.5"  y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block9"  x="52.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block10" x="57.5"  y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block11" x="62.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block11" x="67.5"  y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block13" x="72.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block12" x="77.5"  y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block block15" x="82.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="76"  width="4" height="4" rx=".5"></rect>
+            <rect class="block" x="92.5" y="76"  width="4" height="4" rx=".5"></rect>
+        </svg>
+
+    <input type="text" placeholder="Enter minutes" class="minutes-input"> <input type="submit" class="timer-submit">
+
+    <div class="timer-container">
+        <div class="minutes-extra-zero">0</div><div class="minutes-display">00</div><div class="colon">:</div><div class="seconds-extra-zero">0</div><div class="seconds-display">00</div>
+    </div>
+
+    <div class="timer-buttons-container">
+        <button class="reset-timer">Reset</button>
+        <button class="pause-timer">Pause</button>
+    </div>
+
 </div>
-
-<div class="timer-buttons-container">
-    <button class="reset-timer">Reset</button>
-    <button class="pause-timer">Pause</button>
-</div>
-
-<div class="svg-flex-container">
-    <svg viewBox="0 0 220 92" xmlns="http://www.w3.org/2000/svg" class="block-container">
-
-        {#Row3 #}
-        <rect class="block" x="42.5" y="26"  width="4" height="4" rx=".5"></rect><rect class="block" x="52.5" y="26"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="62.5" y="26"  width="4" height="4" rx=".5"></rect>
-
-        {#Row4#}
-        <rect class="block" x="10" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="15" y="31"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="20" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="25" y="31"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="42.5" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="31"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="52.5" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5" y="31"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="62.5" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="80.5" y="31"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="85" y="31"  width="4" height="4" rx=".5"></rect><rect class="block" x="90" y="31"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="95" y="31"  width="4" height="4" rx=".5"></rect>
-
-        {#Row5#}
-        <rect class="block" x="12.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="36"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="22.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="42.5" y="36"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="47.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="52.5" y="36"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="57.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="62.5" y="36"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="82.5" y="36"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="36"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="92.5" y="36"  width="4" height="4" rx=".5"></rect>
-
-        {#Row6#}
-        <rect class="block" x="12.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="41"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="22.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="42.5" y="41"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="47.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="52.5" y="41"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="57.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="62.5" y="41"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="82.5" y="41"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="41"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="92.5" y="41"  width="4" height="4" rx=".5"></rect>
-
-        {#Row7#}
-        <rect class="block" x="12.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="46"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="22.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="37.5" y="46"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="42.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="46"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="52.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5" y="46"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="62.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="67.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="82.5" y="46"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="87.5" y="46"  width="4" height="4" rx=".5"></rect><rect class="block" x="92.5" y="46"  width="4" height="4" rx=".5"></rect>
-
-        {#Row8#}
-        <rect class="block" x="12.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="22.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="27.5"  y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="32.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="37.5"  y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="42.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="52.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5"  y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="62.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="67.5"  y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="72.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="77.5"  y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="82.5" y="51"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="51"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="92.5" y="51"  width="4" height="4" rx=".5"></rect>
-
-        {#Row9#}
-        <rect class="block" x="12.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="17.5" y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="22.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="27.5" y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="32.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="37.5" y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="42.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="47.5" y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="52.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="57.5"  y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="62.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="67.5"  y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="72.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="77.5"  y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="82.5" y="56"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="56"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="92.5" y="56"  width="4" height="4" rx=".5"></rect>
-
-        {#Row10#}
-        <rect class="block block16" x="12.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block17" x="17.5"  y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block18" x="22.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block19" x="27.5"  y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block20" x="32.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block21" x="37.5"  y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block22" x="42.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block23" x="47.5"  y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block24" x="52.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block25" x="57.5"  y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block26" x="62.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block27" x="67.5"  y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block28" x="72.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block block29" x="77.5"  y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block30" x="82.5"  y="61"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="61"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="87.5" y="61"  width="4" height="4" rx=".5"></rect><rect class="block" x="92.5" y="61"  width="4" height="4" rx=".5"></rect>
-
-        {#Row11#}
-        <rect class="block block1"  x="12.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block2" x="17.5"  y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block3"  x="22.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block4" x="27.5"  y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block5"  x="32.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block6" x="37.5"  y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block7"  x="42.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block8" x="47.5"  y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block9"  x="52.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block10" x="57.5"  y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block11" x="62.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block11" x="67.5"  y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block13" x="72.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block block12" x="77.5"  y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block15" x="82.5"  y="66"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="66"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="92.5" y="66"  width="4" height="4" rx=".5"></rect>
-
-        {#Row12#}
-        <rect class="block block1"  x="12.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block2" x="17.5"  y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block3"  x="22.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block4" x="27.5"  y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block5"  x="32.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block6" x="37.5"  y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block7"  x="42.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block8" x="47.5"  y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block9"  x="52.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block10" x="57.5"  y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block11" x="62.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block11" x="67.5"  y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block13" x="72.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block block12" x="77.5"  y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block15" x="82.5"  y="71"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="71"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="92.5" y="71"  width="4" height="4" rx=".5"></rect>
-
-        {#Row13#}
-        <rect class="block block1"  x="12.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block2" x="17.5"  y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block3"  x="22.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block4" x="27.5"  y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block5"  x="32.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block6" x="37.5"  y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block7"  x="42.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block8" x="47.5"  y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block9"  x="52.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block10" x="57.5"  y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block11" x="62.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block11" x="67.5"  y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block13" x="72.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block block12" x="77.5"  y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block block15" x="82.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="76"  width="4" height="4" rx=".5"></rect>
-        <rect class="block" x="92.5" y="76"  width="4" height="4" rx=".5"></rect>
-    </svg>
-</div>
-
 
 <div class="progress-castle-info">
     <div class="castle-name">Name: {{ castle_in_progress.castle_name }}</div>
