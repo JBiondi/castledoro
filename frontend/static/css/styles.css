@@ -30,40 +30,34 @@ h1  {
     padding: 10px;
 }
 
-.svg-container {
-    margin-bottom: 20px;
-}
-
-
-.timer-container {
-    display: flex;
-    width: 7%;
+.timer-display {
+    width: 60px;
+    height: 4%;
     justify-items: center;
     background-color: cornflowerblue;
     border: 2px solid crimson;
     border-radius: 3px;
     padding: 3px;
-    margin-left: 75%;
     margin-bottom: 10px;
     margin-top: 5px;
 }
 
-.timer-buttons-container {
-    display: flex;
-    margin-left: 73%;
-    padding: 5px;
-}
-
 .minutes-input {
-    display: flex;
-    margin-left: 70%;
-    margin-top: 100px;
+    width: 90px;
+    height: 4%;
 }
 
 .timer-submit {
-    display: flex;
-    margin-left: 75%;
     margin-top: 5px;
+    height: 4%;
+}
+
+.pause-timer {
+    height: 4%;
+}
+
+.reset-timer {
+    height: 4%;
 }
 
 .minutes {
@@ -106,9 +100,12 @@ h1  {
 }
 
 .main-container {
-    display: flex;
-    width: 20%;
+    display: grid;
+    width: 90%;
     height: 80vh;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
 }
 
 svg {
@@ -117,6 +114,12 @@ svg {
     max-width: 60%;
     min-height: 0;
     justify-content: flex-start;
+}
+
+.timer-container {
+    max-width: 20%;
+    background-color: lightpink;
+    justify-content: end;
 }
 
 .progress-castle-info {
