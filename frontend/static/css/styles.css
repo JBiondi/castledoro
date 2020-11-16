@@ -34,18 +34,18 @@ h1  {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
+    width: 70px;
     height: 30px;
-    background-color: cornflowerblue;
-    border: 2px solid crimson;
+    background-color: lightcyan;
+    border: 2px solid lightcoral;
     border-radius: 3px;
 }
 
 .minutes-input {
     width: 90px;
     justify-content: center;
-    height: 25px;
-    margin: 5px;
+    height: 22px;
+    margin-bottom: 5px;
     padding-left: 5px;
 }
 
@@ -89,7 +89,7 @@ h1  {
 }
 
 .block {
-    fill: thistle;
+    fill: lavender;
     stroke-width: .1px;
     stroke: black;
 }
@@ -103,7 +103,7 @@ h1  {
     flex-wrap: nowrap;
     width: 90%;
     height: 60vh;
-    margin: auto;
+    margin-left: 13%;
 }
 
 svg {
@@ -117,14 +117,20 @@ svg {
 .timer-container {
     width: 200px;
     max-height: 100px;
-    background-color: lightpink;
+    background-color: lavenderblush;
     padding: 5px;
-    margin: auto;
     justify-content: center;
     border-radius: 4px;
+    margin-left: 10px;
 }
 
 .progress-castle-info {
     margin-top: 10px;
+    margin-right: 20px;
+}
+
+.info-and-timer-flex-container {
+    display: flex;
+    justify-content: center;
 }
 

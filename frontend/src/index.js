@@ -10,14 +10,16 @@ const secondsExtraZero = document.querySelector('.seconds-extra-zero');
 const minutesExtraZero = document.querySelector('.minutes-extra-zero');
 
 const completedBlocksText = document.querySelector('.completed-blocks-text');
+
 const block1 = document.querySelector('.block1')
 const block2 = document.querySelector('.block2')
 const block3 = document.querySelector('.block3');
 const block4 = document.querySelector('.block4');
 const block5 = document.querySelector('.block5');
 const block6 = document.querySelector('.block6');
+const block7 = document.querySelector('.block7');
 
-const blocksArray = [block1, block2, block3, block4, block5, block6]
+const blocksArray = [block1, block2, block3, block4, block5, block6, block7]
 
 
 let startTimer;
