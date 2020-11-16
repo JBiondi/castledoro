@@ -24,7 +24,7 @@
 <h1>Castle progress area for {{ user.username }}</h1>
 
 
-<div class="main-container">
+<div class="svg-container">
     <svg viewBox="-20 0 120 82" xmlns="http://www.w3.org/2000/svg">
 
             {#Row1#}
@@ -140,18 +140,18 @@
             <rect class="block block15" x="82.5"  y="76"  width="4" height="4" rx=".5"></rect><rect class="block" x="87.5" y="76"  width="4" height="4" rx=".5"></rect>
             <rect class="block" x="92.5" y="76"  width="4" height="4" rx=".5"></rect>
         </svg>
+</div>
 
-    <div class="timer-container">
-        <input type="text" placeholder="Enter minutes" class="minutes-input"> <input type="submit" class="timer-submit">
+<div class="timer-container">
+    <input type="text" placeholder="Enter minutes" class="minutes-input"> <input type="submit" class="timer-submit">
 
-        <div class="timer-display">
-            <div class="minutes-extra-zero">0</div><div class="minutes-display">00</div><div class="colon">:</div><div class="seconds-extra-zero">0</div><div class="seconds-display">00</div>
-        </div>
-
-        <button class="reset-timer">Reset</button>
-        <button class="pause-timer">Pause</button>
-
+    <div class="timer-display">
+        <div class="minutes-extra-zero">0</div><div class="minutes-display">00</div><div class="colon">:</div><div class="seconds-extra-zero">0</div><div class="seconds-display">00</div>
     </div>
+
+    <button class="reset-timer">Reset</button>
+    <button class="pause-timer">Pause</button>
+
 </div>
 
 <div class="progress-castle-info">

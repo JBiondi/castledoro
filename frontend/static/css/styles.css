@@ -42,10 +42,11 @@ h1  {
 }
 
 .minutes-input {
-    width: 100px;
+    width: 90px;
     justify-content: center;
-    height: 30px;
+    height: 25px;
     margin: 5px;
+    padding-left: 5px;
 }
 
 .timer-submit {
@@ -97,11 +98,12 @@ h1  {
     fill: crimson;
 }
 
-.main-container {
+.svg-container {
     display: inline-flex;
     flex-wrap: nowrap;
     width: 90%;
-    height: 80vh;
+    height: 60vh;
+    margin: auto;
 }
 
 svg {
@@ -117,7 +119,9 @@ svg {
     max-height: 100px;
     background-color: lightpink;
     padding: 5px;
-    margin: 5px;
+    margin: auto;
+    justify-content: center;
+    border-radius: 4px;
 }
 
 .progress-castle-info {
