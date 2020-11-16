@@ -11,15 +11,8 @@ const minutesExtraZero = document.querySelector('.minutes-extra-zero');
 
 const completedBlocksText = document.querySelector('.completed-blocks-text');
 
-const block1 = document.querySelector('.block1')
-const block2 = document.querySelector('.block2')
-const block3 = document.querySelector('.block3');
-const block4 = document.querySelector('.block4');
-const block5 = document.querySelector('.block5');
-const block6 = document.querySelector('.block6');
-const block7 = document.querySelector('.block7');
-
-const blocksArray = [block1, block2, block3, block4, block5, block6, block7]
+const blocksArray = [...Array(165).keys()]
+    .map(index => document.querySelector((`.block${index+1}`)));
 
 
 let startTimer;
@@ -59,6 +52,7 @@ if (resetTimerButton) {
     })
 }
 
+
 function getCookie(flavor) {
     const allCookies = document.cookie.split(';');
     const trimmedCookies = allCookies.map(cookie => cookie.trim())
@@ -77,12 +71,14 @@ function runTimer() {
 
     console.log(minutesDisplay.innerText, seconds);
 
+    // Dont worry about this warning we need it to be type coerced
     if (minutesDisplay.innerText != 0 && seconds === 0) {
 
         if (minutesDisplay.innerText < 10) {
             minutesExtraZero.style.display = 'block';
             secondsExtraZero.style.display = 'none';
-            secondsDisplay.innerText = 59;
+            secondsDisplay.innerText = 3;
+            // secondsDisplay.innerText = 59;
             minutesDisplay.innerText--;
         }
 

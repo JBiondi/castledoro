@@ -55,7 +55,7 @@ def make_progress_on_existing_castle(request):
     request.session['progress_id'] = requested_castle_id
 
     context = {'castle_in_progress': castle_in_progress, 'castle_id': requested_castle_id,
-               'completed_blocks': castle_in_progress.completed_blocks}
+               'initial_completed_blocks': castle_in_progress.completed_blocks}
 
     return render(request, 'frontend/make_progress_on_existing_castle.html', context)
 
