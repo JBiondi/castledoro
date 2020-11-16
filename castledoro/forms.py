@@ -6,7 +6,7 @@ class NewCastleForm(forms.ModelForm):
 
     class Meta:
         model = Castle
-        fields = ['castle_name', 'banner_color']
+        fields = ['castle_name']
 
 
 class DeleteCastleForm(forms.ModelForm):
