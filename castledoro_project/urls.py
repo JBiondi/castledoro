@@ -19,4 +19,6 @@ urlpatterns = [
          name='progress_namespace'),
     path('session_completed_api_endpoint/', castledoro_views.session_completed_api_endpoint,
          name='session_completed_namespace'),
+    path('populate_previously_completed_blocks_api_endpoint/', castledoro_views.populate_previously_completed_blocks_api_endpoint,
+         name='populate_previously_completed_blocks_namespace'),
 ]

@@ -53,9 +53,9 @@ def make_progress_on_existing_castle(request):
     requested_castle_id = request.GET['castle']
     castle_in_progress = Castle.objects.get(castle_id=requested_castle_id)
     request.session['progress_id'] = requested_castle_id
+    request.session['previously_completed_blocks'] = castle_in_progress.completed_blocks
 
-    context = {'castle_in_progress': castle_in_progress, 'castle_id': requested_castle_id,
-               'initial_completed_blocks': castle_in_progress.completed_blocks}
+    context = {'castle_in_progress': castle_in_progress, 'castle_id': requested_castle_id}
 
     return render(request, 'frontend/make_progress_on_existing_castle.html', context)
 
@@ -67,7 +67,7 @@ def session_completed_api_endpoint(request):
         relevant_castle = Castle.objects.get(castle_id=relevant_id)
 
         if relevant_castle.completed_blocks < relevant_castle.total_blocks:
-            print(f'Completed blocks is currently {relevant_castle.completed_blocks}')
+            print(f'Completed blocks was {relevant_castle.completed_blocks}')
             relevant_castle.completed_blocks += 1
             relevant_castle.save()
             print(f'Completed blocks is now {relevant_castle.completed_blocks}')
@@ -79,3 +79,11 @@ def session_completed_api_endpoint(request):
         json_completed_blocks = json.dumps(completed_blocks)
 
         return HttpResponse(json_completed_blocks, content_type='application/json')
+
+
+@login_required
+def populate_previously_completed_blocks_api_endpoint(request):
+    previously_completed_blocks = request.session['previously_completed_blocks']
+    json_previously_completed_blocks = json.dumps(previously_completed_blocks)
+
+    return HttpResponse(json_previously_completed_blocks, content_type='application/json')

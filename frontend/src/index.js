@@ -63,6 +63,39 @@ function getCookie(flavor) {
 
 const csrftoken = getCookie('csrftoken');
 
+function populateCompletedBlocks() {
+    fetch(`http://127.0.0.1:8000/populate_previously_completed_blocks_api_endpoint/`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken,
+        }
+    })
+    .then(response => {
+            return response.json();
+        })
+    .then(function colorBlocks (data) {
+
+            const stringData = JSON.stringify(data);
+            const numData = parseInt(stringData, 10);
+
+            const indexesArray = [...Array(numData + 1).keys()]
+            console.log(indexesArray)
+
+            blocksArray.forEach(block => {
+                indexesArray.forEach(idx => {
+                    if (block.classList.contains(`block${idx}`)) {
+                        block.style.fill = 'dimgrey';
+                    }
+                })
+            });
+        })
+}
+
+if(document.URL.indexOf("make_progress_on_existing_castle") >= 0){
+    populateCompletedBlocks();
+}
+
 
 function runTimer() {
     console.log("Running timer!")
@@ -71,7 +104,7 @@ function runTimer() {
 
     console.log(minutesDisplay.innerText, seconds);
 
-    // Dont worry about this warning we need it to be type coerced
+    // Dont worry about this warning we are taking advantage of the type coercion
     if (minutesDisplay.innerText != 0 && seconds === 0) {
 
         if (minutesDisplay.innerText < 10) {
@@ -149,7 +182,7 @@ function updateCastleBlocks() {
 
             blocksArray.forEach(block => {
                 if (block.classList.contains(`block${data}`)) {
-                        block.style.fill = 'green';
+                        block.style.fill = 'dimgrey';
                 }
             });
         })
