@@ -63,6 +63,7 @@ function getCookie(flavor) {
 
 const csrftoken = getCookie('csrftoken');
 
+
 function populateCompletedBlocks() {
     fetch(`http://127.0.0.1:8000/populate_previously_completed_blocks_api_endpoint/`, {
         method: 'GET',
@@ -80,7 +81,6 @@ function populateCompletedBlocks() {
             const numData = parseInt(stringData, 10);
 
             const indexesArray = [...Array(numData + 1).keys()]
-            console.log(indexesArray)
 
             blocksArray.forEach(block => {
                 indexesArray.forEach(idx => {
@@ -91,6 +91,7 @@ function populateCompletedBlocks() {
             });
         })
 }
+
 
 if(document.URL.indexOf("make_progress_on_existing_castle") >= 0){
     populateCompletedBlocks();
