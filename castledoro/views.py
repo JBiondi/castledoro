@@ -73,7 +73,7 @@ def session_completed_api_endpoint(request):
             print(f'Completed blocks is now {relevant_castle.completed_blocks}')
 
         else:
-            print('Castle complete!')
+            print('You already finished this castle, how about making a new one?')
 
         completed_blocks = relevant_castle.completed_blocks
         json_completed_blocks = json.dumps(completed_blocks)

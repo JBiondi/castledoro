@@ -10,14 +10,15 @@ const secondsExtraZero = document.querySelector('.seconds-extra-zero');
 const minutesExtraZero = document.querySelector('.minutes-extra-zero');
 
 const completedBlocksText = document.querySelector('.completed-blocks-text');
+const timerContainer = document.querySelector('.timer-container');
+const congratsMessage = document.querySelector('.congrats-message');
 
 const blocksArray = [...Array(165).keys()]
     .map(index => document.querySelector((`.block${index+1}`)));
 
+let weDone = false;
 
 let startTimer;
-let newSessions = 0;
-
 
 if (timerSubmit) {
     timerSubmit.addEventListener('click', function () {
@@ -158,10 +159,13 @@ function runTimer() {
         secondsExtraZero.style.display = 'none';
         minutesDisplay.innerText = '00';
         secondsDisplay.innerText = '00';
-        newSessions++;
-        console.log(`Sessions completed is now: ${newSessions}`);
+
         updateCastleBlocks();
         clearInterval(startTimer);
+
+        if (!weDone) {
+            location.reload(true);
+        }
     }
 }
 
@@ -179,12 +183,27 @@ function updateCastleBlocks() {
         })
     .then(function updateBlocksHTML (data) {
             console.log(`This is the data ${data}`);
-            completedBlocksText.innerHTML = `Completed Blocks: ${JSON.stringify(data)}`;
+            const completedBlocksAsString = JSON.stringify(data);
+            const completedBlocksAsInt = parseInt(completedBlocksAsString);
 
-            blocksArray.forEach(block => {
-                if (block.classList.contains(`block${data}`)) {
-                        block.style.fill = 'dimgrey';
-                }
-            });
+            if (completedBlocksAsInt < 165) {
+                completedBlocksText.innerHTML = `Completed Blocks: ${completedBlocksAsString}`;
+                blocksArray.forEach(block => {
+                    if (block.classList.contains(`block${completedBlocksAsString}`)) {
+                            block.style.fill = 'dimgrey';
+                    }
+                });
+            }
+            else if (completedBlocksAsInt === 165) {
+                completedBlocksText.innerHTML = `Completed Blocks: ${completedBlocksAsString}`;
+                blocksArray.forEach(block => {
+                    if (block.classList.contains(`block${completedBlocksAsString}`)) {
+                            block.style.fill = 'dimgrey';
+                            weDone = true;
+                            timerContainer.style.display = 'none';
+                            congratsMessage.style.display = 'flex';
+                    }
+                });
+            }
         })
 }

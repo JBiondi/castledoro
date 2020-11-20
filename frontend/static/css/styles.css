@@ -134,3 +134,9 @@ svg {
     justify-content: center;
 }
 
+.congrats-message {
+    display: none;
+    justify-content: center;
+    margin-top: 7px;
+}
+
