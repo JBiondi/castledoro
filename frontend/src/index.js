@@ -16,7 +16,7 @@ const congratsMessage = document.querySelector('.congrats-message');
 const blocksArray = [...Array(165).keys()]
     .map(index => document.querySelector((`.block${index+1}`)));
 
-let weDone = false;
+// let weDone = false;
 
 let startTimer;
 
@@ -160,17 +160,17 @@ function runTimer() {
         minutesDisplay.innerText = '00';
         secondsDisplay.innerText = '00';
 
-        updateCastleBlocks();
-        clearInterval(startTimer);
-
-        if (!weDone) {
-            location.reload(true);
-        }
+        updateCastleBlocks(() => {
+            clearInterval(startTimer);
+            if (congratsMessage.style.display !== 'flex') {
+                location.reload(true);
+            }
+        });
     }
 }
 
 
-function updateCastleBlocks() {
+function updateCastleBlocks(callback) {
     fetch(`http://127.0.0.1:8000/session_completed_api_endpoint/`, {
         method: 'POST',
         headers: {
@@ -199,11 +199,11 @@ function updateCastleBlocks() {
                 blocksArray.forEach(block => {
                     if (block.classList.contains(`block${completedBlocksAsString}`)) {
                             block.style.fill = 'dimgrey';
-                            weDone = true;
                             timerContainer.style.display = 'none';
                             congratsMessage.style.display = 'flex';
                     }
                 });
             }
+            callback();
         })
 }
