@@ -11,12 +11,13 @@ const minutesExtraZero = document.querySelector('.minutes-extra-zero');
 
 const completedBlocksText = document.querySelector('.completed-blocks-text');
 const timerContainer = document.querySelector('.timer-container');
+
 const congratsMessage = document.querySelector('.congrats-message');
+const returnToProfileLink = document.querySelector('.return-to-profile-link');
 
 const blocksArray = [...Array(165).keys()]
     .map(index => document.querySelector((`.block${index+1}`)));
 
-// let weDone = false;
 
 let startTimer;
 
@@ -201,6 +202,7 @@ function updateCastleBlocks(callback) {
                             block.style.fill = 'dimgrey';
                             timerContainer.style.display = 'none';
                             congratsMessage.style.display = 'flex';
+                            returnToProfileLink.style.display = 'flex';
                     }
                 });
             }

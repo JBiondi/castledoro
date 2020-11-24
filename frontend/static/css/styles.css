@@ -140,3 +140,9 @@ svg {
     margin-top: 7px;
 }
 
+.return-to-profile-link {
+    display: none;
+    justify-content: center;
+    margin-top: 5px;
+}
+
