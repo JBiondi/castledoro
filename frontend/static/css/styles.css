@@ -2,16 +2,17 @@ body {
     height: 100%;
 }
 
-h1  {
-    color: fuchsia;
+h2  {
+    color: lemonchiffon;
     text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .navigation {
     display: flex;
     height: 50px;
-    background-color: aqua;
-    padding-left: 80%;
+    background-color: darkolivegreen;
+    padding-left: 75%;
 }
 
 .nav-login {
@@ -24,14 +25,20 @@ h1  {
 
 .nav-logout {
     padding: 10px;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .nav-user-profile {
     padding: 10px;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .nav-home {
     padding: 10px;
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .timer-display {
@@ -41,7 +48,7 @@ h1  {
     width: 70px;
     height: 30px;
     background-color: lightcyan;
-    border: 2px solid lightcoral;
+    border: 2px solid midnightblue;
     border-radius: 3px;
 }
 
@@ -121,7 +128,7 @@ svg {
 .timer-container {
     width: 200px;
     max-height: 100px;
-    background-color: lavenderblush;
+    background-color: lemonchiffon;
     padding: 5px;
     justify-content: center;
     border-radius: 4px;
@@ -130,7 +137,9 @@ svg {
 
 .progress-castle-info {
     margin-top: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
+    color: lemonchiffon;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .info-and-timer-flex-container {
@@ -148,5 +157,15 @@ svg {
     display: none;
     justify-content: center;
     margin-top: 5px;
+}
+
+.current-castles-container {
+    background-color: lavender;
+    margin-left: 15px;
+}
+
+.completed-castles-container {
+    background-color: lightcyan;
+    margin-left: 15px;
 }
 

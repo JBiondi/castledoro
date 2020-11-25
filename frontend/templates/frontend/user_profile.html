@@ -22,28 +22,32 @@
     {% endif %}
 </div>
 
-<h1>User Profile area for {{ user.username }}</h1>
+<h1>User profile area for {{ user.username }}</h1>
 
 <h2>Castles currently under construction:</h2>
-{% for castle in current_castles %}
-    <p>CASTLE NAME: {{ castle.castle_name }}</p>
-    <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
-    <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
-    <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
-    <button onclick="location.href = '/make_progress_on_existing_castle?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
-{% endfor %}
+<div class="current-castles-container">
+    {% for castle in current_castles %}
+        <p>CASTLE NAME: {{ castle.castle_name }}</p>
+        <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
+        <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
+        <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
+        <button onclick="location.href = '/make_progress_on_existing_castle?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
+    {% endfor %}
+</div>
 
 <br>
 <br>
 <br>
 
 <h2>Completed castles:</h2>
-{% for castle in completed_castles %}
-    <p>CASTLE NAME: {{ castle.castle_name }}</p>
-    <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
-    <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
-    <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
-{% endfor %}
+<div class="completed-castles-container">
+    {% for castle in completed_castles %}
+        <p>CASTLE NAME: {{ castle.castle_name }}</p>
+        <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
+        <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
+        <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
+    {% endfor %}
+</div>
 
 <script src="{% static "frontend/main.js" %}"></script>
 </body>

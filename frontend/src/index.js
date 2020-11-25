@@ -87,7 +87,7 @@ function populateCompletedBlocks() {
             blocksArray.forEach(block => {
                 indexesArray.forEach(idx => {
                     if (block.classList.contains(`block${idx}`)) {
-                        block.style.fill = 'dimgrey';
+                        block.style.fill = 'slategrey';
                     }
                 })
             });
@@ -199,7 +199,7 @@ function updateCastleBlocks(callback) {
                 completedBlocksText.innerHTML = `Completed Blocks: ${completedBlocksAsString}`;
                 blocksArray.forEach(block => {
                     if (block.classList.contains(`block${completedBlocksAsString}`)) {
-                            block.style.fill = 'dimgrey';
+                            block.style.fill = 'slategrey';
                             timerContainer.style.display = 'none';
                             congratsMessage.style.display = 'flex';
                             returnToProfileLink.style.display = 'flex';

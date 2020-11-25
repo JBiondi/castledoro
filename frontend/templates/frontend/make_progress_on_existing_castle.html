@@ -8,9 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Make progress on a skill castle</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
 </head>
-<body>
+{#282422#}
+<body style="background-color: #282422">
 
 <div class="navigation">
     {% if user.is_authenticated %}
@@ -24,7 +27,7 @@
     {% endif %}
 </div>
 
-<h1>Castle progress area for {{ user.username }}</h1>
+<h2>castle progress area for {{ user.username }}</h2>
 
 
 <div class="svg-container">
