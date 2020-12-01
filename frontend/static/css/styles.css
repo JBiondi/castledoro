@@ -131,8 +131,8 @@ svg {
     background-color: lemonchiffon;
     padding: 5px;
     justify-content: center;
-    border-radius: 4px;
-    margin-left: 10px;
+    border-radius: 2px;
+    margin: auto;
 }
 
 .progress-castle-info {
@@ -167,5 +167,10 @@ svg {
 .completed-castles-container {
     background-color: lightcyan;
     margin-left: 15px;
+}
+
+.completed-blocks-value {
+    color: white;
+    text-align: center;
 }
 

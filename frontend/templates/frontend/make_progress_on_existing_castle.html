@@ -17,9 +17,9 @@
 
 <div class="navigation">
     {% if user.is_authenticated %}
-        <a class="nav-logout" href="{% url 'logout_namespace' %}">Logout</a>
-        <a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">Profile</a>
-        <a class="nav-home" href="{% url 'home_namespace' %}">Home</a>
+        <a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a>
+        <a class="nav-home" href="{% url 'home_namespace' %}">home</a>
+        <a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a>
 
     {% else %}
         <a class="nav-login" href="{% url 'login_namespace' %}">Login</a>
@@ -27,7 +27,10 @@
     {% endif %}
 </div>
 
-<h2>castle progress area for {{ user.username }}</h2>
+<div class="progress-castle-info">
+        <h2 class="castle-name">{{ castle_in_progress.castle_name }}</h2>
+        <h3 class="completed-blocks-value">{{ castle_in_progress.completed_blocks }} / 165</h3>
+    </div>
 
 
 <div class="svg-container">
@@ -150,11 +153,6 @@
 </div>
 
 <div class="info-and-timer-flex-container">
-
-    <div class="progress-castle-info">
-        <div class="castle-name">{{ castle_in_progress.castle_name }}</div>
-        <div class="completed-blocks-text">Completed Blocks: {{ castle_in_progress.completed_blocks }} / 165</div>
-    </div>
 
     <div class="timer-container">
         <input type="text" placeholder="Enter minutes" class="minutes-input"> <input type="submit" class="timer-submit">

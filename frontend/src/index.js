@@ -9,7 +9,7 @@ const secondsDisplay = document.querySelector('.seconds-display');
 const secondsExtraZero = document.querySelector('.seconds-extra-zero');
 const minutesExtraZero = document.querySelector('.minutes-extra-zero');
 
-const completedBlocksText = document.querySelector('.completed-blocks-text');
+const completedBlocksText = document.querySelector('.completed-blocks-value');
 const timerContainer = document.querySelector('.timer-container');
 
 const congratsMessage = document.querySelector('.congrats-message');
@@ -188,7 +188,7 @@ function updateCastleBlocks(callback) {
             const completedBlocksAsInt = parseInt(completedBlocksAsString);
 
             if (completedBlocksAsInt < 165) {
-                completedBlocksText.innerHTML = `Completed Blocks: ${completedBlocksAsString}`;
+                completedBlocksText.innerHTML = `${completedBlocksAsString} /165`;
                 blocksArray.forEach(block => {
                     if (block.classList.contains(`block${completedBlocksAsString}`)) {
                             block.style.fill = 'dimgrey';
@@ -196,7 +196,7 @@ function updateCastleBlocks(callback) {
                 });
             }
             else if (completedBlocksAsInt === 165) {
-                completedBlocksText.innerHTML = `Completed Blocks: ${completedBlocksAsString}`;
+                completedBlocksText.innerHTML = `${completedBlocksAsString} /165`;
                 blocksArray.forEach(block => {
                     if (block.classList.contains(`block${completedBlocksAsString}`)) {
                             block.style.fill = 'slategrey';
