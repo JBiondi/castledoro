@@ -2,17 +2,12 @@ body {
     height: 100%;
 }
 
-h2  {
-    color: lemonchiffon;
-    text-align: center;
-    font-family: 'Chakra Petch', sans-serif;
-}
 
 .navigation {
     display: flex;
     height: 50px;
     background-color: darkolivegreen;
-    padding-left: 75%;
+    padding-left: 65%;
 }
 
 .nav-login {
@@ -39,6 +34,12 @@ h2  {
     padding: 10px;
     color: white;
     font-family: 'Chakra Petch', sans-serif;
+}
+
+.nav-name {
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 10px;
 }
 
 .timer-display {
@@ -110,7 +111,7 @@ h2  {
 }
 
 .svg-container {
-    display: inline-flex;
+    display: flex;
     flex-wrap: nowrap;
     width: 90%;
     height: 60vh;
@@ -140,6 +141,7 @@ svg {
     margin-right: 10px;
     color: lemonchiffon;
     font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
 }
 
 .info-and-timer-flex-container {
@@ -159,14 +161,31 @@ svg {
     margin-top: 5px;
 }
 
+
+.profile-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .current-castles-container {
-    background-color: lavender;
+    background-color: lemonchiffon;
     margin-left: 15px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    width: 30%;
+    border-radius: 3px;
 }
 
 .completed-castles-container {
-    background-color: lightcyan;
+    background-color: #F7DC6F ;
     margin-left: 15px;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    width: 30%;
+    border-radius: 3px;
 }
 
 .completed-blocks-value {
@@ -174,3 +193,14 @@ svg {
     text-align: center;
 }
 
+.profile-under-construction {
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
+.profile-completed {
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}

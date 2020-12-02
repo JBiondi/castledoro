@@ -17,6 +17,7 @@
 
 <div class="navigation">
     {% if user.is_authenticated %}
+        <div class="nav-name">{{ user.username }} </div>
         <a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a>
         <a class="nav-home" href="{% url 'home_namespace' %}">home</a>
         <a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a>
@@ -29,8 +30,8 @@
 
 <div class="progress-castle-info">
         <h2 class="castle-name">{{ castle_in_progress.castle_name }}</h2>
-        <h3 class="completed-blocks-value">{{ castle_in_progress.completed_blocks }} / 165</h3>
-    </div>
+        <h2 class="completed-blocks-value">{{ castle_in_progress.completed_blocks }} / 165</h2>
+</div>
 
 
 <div class="svg-container">

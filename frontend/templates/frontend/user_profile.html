@@ -8,12 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>User Profile</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
 </head>
-<body>
+<body style="background-color: #282422">
 
 <div class="navigation">
     {% if user.is_authenticated %}
+        <div class="nav-name">{{ user.username }} </div>
         <a class="nav-logout" href="{% url 'logout_namespace' %}">Logout</a>
         <a class="nav-home" href="{% url 'home_namespace' %}">Home</a>
     {% else %}
@@ -22,31 +24,33 @@
     {% endif %}
 </div>
 
-<h1>User profile area for {{ user.username }}</h1>
+<div class="profile-flex-container">
 
-<h2>Castles currently under construction:</h2>
-<div class="current-castles-container">
-    {% for castle in current_castles %}
-        <p>CASTLE NAME: {{ castle.castle_name }}</p>
-        <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
-        <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
-        <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
-        <button onclick="location.href = '/make_progress_on_existing_castle?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
-    {% endfor %}
-</div>
+    <h2 class="profile-under-construction">castles currently under construction</h2>
+    <div class="current-castles-container">
+        {% for castle in current_castles %}
+            <p>CASTLE NAME: {{ castle.castle_name }}</p>
+            <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
+            <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
+            <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
+            <button onclick="location.href = '/make_progress_on_existing_castle?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
+        {% endfor %}
+    </div>
 
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
 
-<h2>Completed castles:</h2>
-<div class="completed-castles-container">
-    {% for castle in completed_castles %}
-        <p>CASTLE NAME: {{ castle.castle_name }}</p>
-        <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
-        <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
-        <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
-    {% endfor %}
+    <h2 class="profile-completed">completed castles</h2>
+    <div class="completed-castles-container">
+        {% for castle in completed_castles %}
+            <p>CASTLE NAME: {{ castle.castle_name }}</p>
+            <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
+            <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
+            <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
+        {% endfor %}
+    </div>
+
 </div>
 
 <script src="{% static "frontend/main.js" %}"></script>
