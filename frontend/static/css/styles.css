@@ -2,6 +2,50 @@ body {
     height: 100%;
 }
 
+.homepage-welcome {
+    color: lemonchiffon;
+    background-color: darkolivegreen;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
+.homepage-flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homepage-register-text {
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
+.homepage-login-text {
+    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
+.homepage-register-link {
+    background-color: lemonchiffon;
+    color: darkgreen;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 2px;
+    text-align: center;
+    width: 100px;
+    height: 31px;
+}
+
+.homepage-login-link {
+    background-color: lemonchiffon;
+    color: darkgreen;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 2px;
+    width: 100px;
+    height: 31px;
+    text-align: center;
+}
 
 .navigation {
     display: flex;
