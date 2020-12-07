@@ -26,12 +26,12 @@
 
 <div class="profile-flex-container">
 
-    <h2 class="profile-under-construction">castles currently under construction</h2>
+    <h2 class="profile-under-construction">under construction</h2>
     <div class="current-castles-container">
         {% for castle in current_castles %}
-            <p>CASTLE NAME: {{ castle.castle_name }}</p>
-            <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
-            <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
+            <p>{{ castle.castle_name }}</p>
+            <p>BLOCKS: {{ castle.completed_blocks }}/165</p>
+            <p>MODIFIED: {{ castle.last_modified }} GMT</p>
             <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
             <button onclick="location.href = '/make_progress_on_existing_castle?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
         {% endfor %}
@@ -41,12 +41,12 @@
     <br>
     <br>
 
-    <h2 class="profile-completed">completed castles</h2>
+    <h2 class="profile-completed">completed</h2>
     <div class="completed-castles-container">
         {% for castle in completed_castles %}
-            <p>CASTLE NAME: {{ castle.castle_name }}</p>
-            <p>BLOCKS COMPLETED: {{ castle.completed_blocks }}/165</p>
-            <p>LAST MODIFIED: {{ castle.last_modified }} GMT</p>
+            <p>{{ castle.castle_name }}</p>
+            <p>BLOCKS: {{ castle.completed_blocks }}/165</p>
+            <p>MODIFIED: {{ castle.last_modified }} GMT</p>
             <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
         {% endfor %}
     </div>

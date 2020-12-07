@@ -13,14 +13,20 @@
 </head>
 <body style="background-color: #282422">
 
-<h1 class="homepage-welcome">CASTLEDORO</h1>
-
-<div class="homepage-flex-container">
 {% if user.is_authenticated %}
+    <div class="navigation">
         <div class="nav-name">{{ user.username }} </div>
         <a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a>
         <a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a>
-    {% else %}
+    </div>
+{% endif %}
+
+{% if not user.is_authenticated %}
+    <h1 class="homepage-welcome">CASTLEDORO</h1>
+{% endif %}
+
+<div class="homepage-flex-container">
+    {% if not user.is_authenticated %}
         <h3 class="homepage-register-text">register for free to start building</h3>
         <a class="homepage-register-link" href="{% url 'user_registration_namespace' %}">register</a>
         <br>

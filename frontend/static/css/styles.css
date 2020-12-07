@@ -7,6 +7,8 @@ body {
     background-color: darkolivegreen;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
+    padding-top: 7px;
+    height: 60px;
 }
 
 .homepage-flex-container {
@@ -238,13 +240,13 @@ svg {
 }
 
 .profile-under-construction {
-    color: white;
+    color: silver;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
 
 .profile-completed {
-    color: white;
+    color: silver;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
