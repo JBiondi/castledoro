@@ -81,7 +81,7 @@ body {
 }
 
 .nav-name {
-    color: white;
+    color: #F7DC6F;
     font-family: 'Chakra Petch', sans-serif;
     padding: 10px;
 }
@@ -215,20 +215,20 @@ svg {
 .current-castles-container {
     background-color: lemonchiffon;
     margin-left: 15px;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    width: 30%;
+    width: 28%;
     border-radius: 3px;
 }
 
 .completed-castles-container {
     background-color: #F7DC6F ;
     margin-left: 15px;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    width: 30%;
+    width: 28%;
     border-radius: 3px;
 }
 
