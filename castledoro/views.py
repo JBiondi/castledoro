@@ -82,7 +82,7 @@ def session_completed_api_endpoint(request):
 
 
 @login_required
-def populate_previously_completed_blocks_api_endpoint(request):
+def populate_prev_blocks_api_endpoint(request):
     previously_completed_blocks = request.session['previously_completed_blocks']
     json_previously_completed_blocks = json.dumps(previously_completed_blocks)
 

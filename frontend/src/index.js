@@ -67,7 +67,7 @@ const csrftoken = getCookie('csrftoken');
 
 
 function populateCompletedBlocks() {
-    fetch(`http://127.0.0.1:8000/populate_previously_completed_blocks_api_endpoint/`, {
+    fetch(`http://127.0.0.1:8000/populate_prev_blocks_api_endpoint/`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

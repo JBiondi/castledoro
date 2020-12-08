@@ -9,7 +9,7 @@ from castledoro import views as castledoro_views
 urlpatterns = [
     path('', include('frontend.urls')),
     path('admin/', admin.site.urls),
-    path('register/', user_views.user_registration, name='user_registration_namespace'),
+    # path('register/', user_views.user_registration, name='user_registration_namespace'),
     path('login/', auth_views.LoginView.as_view(template_name='frontend/login.html'), name='login_namespace'),
     path('logout/', auth_views.LogoutView.as_view(template_name='frontend/logout.html'), name='logout_namespace'),
     path('user_profile/', user_views.user_profile, name='user_profile_namespace'),
@@ -19,6 +19,6 @@ urlpatterns = [
          name='progress_namespace'),
     path('session_completed_api_endpoint/', castledoro_views.session_completed_api_endpoint,
          name='session_completed_namespace'),
-    path('populate_previously_completed_blocks_api_endpoint/', castledoro_views.populate_previously_completed_blocks_api_endpoint,
-         name='populate_previously_completed_blocks_namespace'),
+    path('populate_prev_blocks_api_endpoint/', castledoro_views.populate_prev_blocks_api_endpoint,
+         name='populate_prev_blocks_namespace'),
 ]

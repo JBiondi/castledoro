@@ -250,3 +250,11 @@ svg {
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
+
+.registration-form-container {
+    color: white;
+}
+
+.new-user-registration-form {
+    color: white;
+}
