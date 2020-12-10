@@ -257,4 +257,18 @@ svg {
 
 .new-user-registration-form {
     color: white;
+    padding: 5px;
+}
+
+.registration-form-username {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+label {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+fieldset {
+    border-radius: 5px;
+    color: lemonchiffon;
 }

@@ -4,8 +4,9 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class CustomUserRegistrationForm(UserCreationForm):
-    email = forms.EmailField(help_text='Optional (only used for password reset)', required=False)
+    email = forms.EmailField(help_text='Optional (used for password reset)', required=False)
     username = forms.CharField(help_text='')
+    username.widget.attrs.update({'class': 'registration-form-username'})
     password1 = forms.CharField(help_text='')
     password2 = forms.CharField(help_text='')
 
