@@ -49,6 +49,16 @@ body {
     text-align: center;
 }
 
+.homepage-register-button {
+    background-color: #F7DC6F;
+    float: right;
+    border-radius: 3px;
+    border-color: #F7DC6F;
+    height: 32px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+}
+
 .navigation {
     display: flex;
     height: 50px;
@@ -260,15 +270,23 @@ svg {
     padding: 5px;
 }
 
-.registration-form-username {
-    font-family: 'Chakra Petch', sans-serif;
-}
-
 label {
     font-family: 'Chakra Petch', sans-serif;
+    width: 200px;
+    display: inline-block;
+}
+
+input {
+    width: 170px;
+    height: 23px;
+    border-radius: 2px;
+    font-size: 18px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 fieldset {
     border-radius: 5px;
     color: lemonchiffon;
+    border-color: lemonchiffon;
 }
