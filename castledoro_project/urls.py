@@ -4,12 +4,13 @@ from django.urls import path
 from django.urls import include
 from users import views as user_views
 from castledoro import views as castledoro_views
+from frontend import views as frontend_views
 
 
 urlpatterns = [
     path('', include('frontend.urls')),
     path('admin/', admin.site.urls),
-    # path('register/', user_views.user_registration, name='user_registration_namespace'),
+    path('register/', frontend_views.index, name='homepage_namespace'),
     path('login/', auth_views.LoginView.as_view(template_name='frontend/login.html'), name='login_namespace'),
     path('logout/', auth_views.LogoutView.as_view(template_name='frontend/logout.html'), name='logout_namespace'),
     path('user_profile/', user_views.user_profile, name='user_profile_namespace'),

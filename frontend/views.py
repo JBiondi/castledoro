@@ -8,7 +8,7 @@ def index(request):
         form = CustomUserRegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login_namespace')
+            return redirect('user_profile_namespace')
 
     form = CustomUserRegistrationForm()
     context = {'form': form}
