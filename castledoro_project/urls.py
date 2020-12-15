@@ -11,7 +11,7 @@ urlpatterns = [
     path('', include('frontend.urls')),
     path('admin/', admin.site.urls),
     path('register/', frontend_views.index, name='homepage_namespace'),
-    path('login/', auth_views.LoginView.as_view(template_name='frontend/login.html'), name='login_namespace'),
+    path('login/', auth_views.LoginView.as_view(template_name='frontend/index.html'), name='homepage_namespace'),
     path('logout/', auth_views.LogoutView.as_view(template_name='frontend/logout.html'), name='logout_namespace'),
     path('user_profile/', user_views.user_profile, name='user_profile_namespace'),
     path('create_new_castle/', castledoro_views.create_new_castle, name='create_castle_namespace'),

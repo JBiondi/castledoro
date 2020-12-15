@@ -116,4 +116,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = 'user_profile_namespace'
-LOGIN_URL = 'login_namespace'
+LOGIN_URL = 'homepage_namespace'
+LOGOUT_REDIRECT_URL = 'homepage_namespace'

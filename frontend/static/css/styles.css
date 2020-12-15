@@ -59,6 +59,16 @@ body {
     font-size: 20px;
 }
 
+.homepage-login-button {
+    background-color: #F7DC6F;
+    float: right;
+    border-radius: 3px;
+    border-color: #F7DC6F;
+    height: 32px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+}
+
 .navigation {
     display: flex;
     height: 50px;
