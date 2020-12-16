@@ -6,15 +6,9 @@ from users.forms import CustomUserRegistrationForm
 
 
 def index(request):
-    registration_form = CustomUserRegistrationForm()
-    login_form = AuthenticationForm()
 
     if request.method == 'POST':
         registration_form = CustomUserRegistrationForm(request.POST)
-        login_form = AuthenticationForm(request.POST)
-
-        if login_form.is_valid():
-            return redirect('user_profile_namespace')
 
         if registration_form.is_valid():
             new_user = registration_form.save()
@@ -24,6 +18,7 @@ def index(request):
             login(request, new_user)
             return redirect('user_profile_namespace')
 
-    context = {'registration_form': registration_form, 'login_form': login_form}
+    registration_form = CustomUserRegistrationForm()
+    context = {'registration_form': registration_form}
 
     return render(request, 'frontend/index.html', context)

@@ -59,14 +59,15 @@ body {
     font-size: 20px;
 }
 
-.homepage-login-button {
+.homepage-login-link {
     background-color: #F7DC6F;
-    float: right;
     border-radius: 3px;
     border-color: #F7DC6F;
+    color: black;
     height: 32px;
+    width: 90px;
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .navigation {

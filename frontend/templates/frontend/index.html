@@ -40,17 +40,8 @@
         </div>
         <br>
         <br>
-        <h3 class="homepage-login-text">already have an account? log in below</h3>
-        <div class="login-form-container">
-            <form class="login-form" method="POST" >
-                {% csrf_token %}
-                <fieldset>
-                    <legend>Log in</legend>
-                    {{ login_form.as_p }}
-                    <button type="submit" class="homepage-login-button">Log In</button>
-                </fieldset>
-            </form>
-        </div>
+        <h3 class="homepage-login-text">already have an account? click below to log in</h3>
+            <a class="homepage-login-link" href="{% url 'login_namespace' %}">Log in</a>
     {% endif %}
 </div>
 
