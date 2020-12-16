@@ -28,7 +28,6 @@
 <div class="homepage-flex-container">
     {% if not user.is_authenticated %}
         <h3 class="homepage-register-text">register for free to start building</h3>
-        <div class="registration-form-container">
             <form class="new-user-registration-form" method="POST" >
                 {% csrf_token %}
                 <fieldset>
@@ -37,7 +36,6 @@
                     <button type="submit" class="homepage-register-button">Sign Up</button>
                 </fieldset>
             </form>
-        </div>
         <br>
         <br>
         <h3 class="homepage-login-text">already have an account? click below to log in</h3>

@@ -8,23 +8,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
 </head>
 <body style="background-color: #282422">
 
-<h1>Login</h1>
+<div class="login_page_flex_container">
 
-<div class="login-form-container">
+    <h1 class="login-page-heading">welcome back</h1>
+
     <form class="login-form" method="POST" >
         {% csrf_token %}
         <fieldset>
             <legend>Log in</legend>
             {{ form.as_p }}
+            <button type="submit" class="login-page-login-button">Log In</button>
         </fieldset>
-
-        <button type="submit">Log In</button>
     </form>
-</div>
+    </div>
 
 <script src="{% static "frontend/main.js" %}"></script>
 </body>
