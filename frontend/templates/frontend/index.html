@@ -33,6 +33,13 @@
                 <fieldset>
                     <legend>Register</legend>
                     {{ registration_form.as_p }}
+
+                    {% if registration_form.errors %}
+                        {% for error in registration_form.errors %}
+                                {{ error|escape }}
+                        {% endfor %}
+                    {% endif %}
+
                     <button type="submit" class="homepage-register-button">Sign Up</button>
                 </fieldset>
             </form>

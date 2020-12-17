@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render
@@ -6,6 +7,7 @@ from users.forms import CustomUserRegistrationForm
 
 
 def index(request):
+    registration_form = CustomUserRegistrationForm()
 
     if request.method == 'POST':
         registration_form = CustomUserRegistrationForm(request.POST)
@@ -18,7 +20,6 @@ def index(request):
             login(request, new_user)
             return redirect('user_profile_namespace')
 
-    registration_form = CustomUserRegistrationForm()
     context = {'registration_form': registration_form}
 
     return render(request, 'frontend/index.html', context)

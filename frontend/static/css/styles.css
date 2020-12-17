@@ -313,3 +313,8 @@ fieldset {
     color: lemonchiffon;
     border-color: lemonchiffon;
 }
+
+li {
+    color: lightcoral;
+    font-size: 21px;
+}
