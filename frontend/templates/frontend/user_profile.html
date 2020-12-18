@@ -33,7 +33,7 @@
             <p>BLOCKS: {{ castle.completed_blocks }}/165</p>
             <p>MODIFIED: {{ castle.last_modified }} GMT</p>
             <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
-            <button onclick="location.href = '/make_progress_on_existing_castle?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
+            <button onclick="location.href = '/make_progress?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
         {% endfor %}
     </div>
 

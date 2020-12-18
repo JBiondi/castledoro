@@ -16,7 +16,7 @@ urlpatterns = [
     path('user_profile/', user_views.user_profile, name='user_profile_namespace'),
     path('create_new_castle/', castledoro_views.create_new_castle, name='create_castle_namespace'),
     path('delete_castle/', castledoro_views.delete_castle, name='delete_castle_namespace'),
-    path('make_progress_on_existing_castle/', castledoro_views.make_progress_on_existing_castle,
+    path('make_progress/', castledoro_views.make_progress_on_existing_castle,
          name='progress_namespace'),
     path('session_completed_api_endpoint/', castledoro_views.session_completed_api_endpoint,
          name='session_completed_namespace'),

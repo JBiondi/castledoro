@@ -57,7 +57,7 @@ def make_progress_on_existing_castle(request):
 
     context = {'castle_in_progress': castle_in_progress, 'castle_id': requested_castle_id}
 
-    return render(request, 'frontend/make_progress_on_existing_castle.html', context)
+    return render(request, 'frontend/make_progress.html', context)
 
 
 @login_required
