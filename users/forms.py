@@ -4,7 +4,6 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class CustomUserRegistrationForm(UserCreationForm):
-    email = forms.EmailField(help_text='', required=False, label='email (optional)')
 
     username = forms.CharField(help_text='', label='username', max_length=18)
     username.widget.attrs.update({'class': 'registration-form-username'})
@@ -14,4 +13,4 @@ class CustomUserRegistrationForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'password1', 'password2', 'email']
+        fields = ['username', 'password1', 'password2']
