@@ -1,6 +1,4 @@
-from django.contrib import messages
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render
 from django.shortcuts import redirect
 from users.forms import CustomUserRegistrationForm
