@@ -94,6 +94,25 @@ body {
     padding-bottom: 6px;
 }
 
+.login-page-register-link {
+    background-color: #F7DC6F;
+    border-radius: 3px;
+    border: 2px solid #F7DC6F;
+    color: black;
+    height: 28px;
+    width: 100px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 22px;
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+.login-page-link-to-registration-text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 22px;
+    color: aliceblue;
+}
+
 .navigation {
     display: flex;
     height: 50px;
