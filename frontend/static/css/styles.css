@@ -295,6 +295,19 @@ svg {
     border-radius: 3px;
 }
 
+.create-new-castle-container {
+    color: aliceblue;
+    margin-left: 12px;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    height: 15%;
+    border-radius: 3px;
+}
+
+#create-new-castle-name-label {
+    text-align: center;
+}
+
 .completed-blocks-value {
     color: white;
     text-align: center;
@@ -307,6 +320,12 @@ svg {
 }
 
 .profile-completed {
+    color: silver;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
+.profile-create-new {
     color: silver;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;

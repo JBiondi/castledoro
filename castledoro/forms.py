@@ -6,6 +6,12 @@ class NewCastleForm(forms.ModelForm):
 
     class Meta:
         model = Castle
+        labels = {
+            'castle_name': ''
+        }
+        widgets = {
+            'castle_name': forms.TextInput(attrs={'id': 'create-new-castle-name-label'}),
+        }
         fields = ['castle_name']
 
 

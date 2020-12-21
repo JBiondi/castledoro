@@ -25,7 +25,14 @@
 </div>
 
 <div class="profile-flex-container">
+    <h2 class="profile-create-new">create a new castle</h2>
+    <div class="create-new-castle-container">
+        <form class="new-castle-form" method="POST" >
+            {% csrf_token %}
+            {{ form.as_p }} <button type="submit">Create</button>
 
+        </form>
+    </div>
     <h2 class="profile-under-construction">under construction</h2>
     <div class="current-castles-container">
         {% for castle in current_castles %}
@@ -34,6 +41,8 @@
             <p>MODIFIED: {{ castle.last_modified }} GMT</p>
             <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
             <button onclick="location.href = '/make_progress?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
+            <br>
+            <br>
         {% endfor %}
     </div>
 

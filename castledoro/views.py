@@ -25,7 +25,7 @@ def create_new_castle(request):
 
     context = {'form': form}
 
-    return render(request, 'frontend/create_new_castle.html', context)
+    return render(request, 'frontend/user_profile.html', context)
 
 
 @login_required
