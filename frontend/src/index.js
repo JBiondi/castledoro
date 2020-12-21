@@ -95,7 +95,7 @@ function populateCompletedBlocks() {
 }
 
 
-if(document.URL.indexOf("make_progress_on_existing_castle") >= 0){
+if(document.URL.indexOf("make_progress") >= 0){
     populateCompletedBlocks();
 }
 
