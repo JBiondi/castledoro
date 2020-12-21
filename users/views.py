@@ -19,7 +19,7 @@ def user_profile(request):
             return redirect('user_profile_namespace')
 
     current_user = request.user
-    castles_queryset = Castle.objects.filter(associated_user_id_id=current_user.id).order_by('last_modified')
+    castles_queryset = Castle.objects.filter(associated_user_id_id=current_user.id).order_by('-last_modified')
     current_castles_array = []
     completed_castles_array = []
 
