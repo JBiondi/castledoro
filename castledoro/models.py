@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Castle(models.Model):
     castle_id = models.AutoField(primary_key=True)
     associated_user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    castle_name = models.CharField(default='castle name', max_length=40)
+    castle_name = models.CharField(default='', max_length=40)
     total_blocks = models.IntegerField(default=165)
     completed_blocks = models.IntegerField(default=0)
     last_modified = models.DateTimeField(auto_now=True)

@@ -296,15 +296,27 @@ svg {
 }
 
 .create-new-castle-container {
-    color: aliceblue;
+    color: #84C576;
     margin-left: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    height: 15%;
+    height: 150px;
+    width: 28%;
     border-radius: 3px;
 }
 
-#create-new-castle-name-label {
+.create-castle-button {
+    background-color: #F7DC6F;
+    border-radius: 3px;
+    border: 2px solid #F7DC6F;
+    color: black;
+    height: 33px;
+    width: 100px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 22px;
+    /*padding-bottom: 6px;*/
     text-align: center;
 }
 
@@ -314,13 +326,13 @@ svg {
 }
 
 .profile-under-construction {
-    color: silver;
+    color: #84C576;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
 
 .profile-completed {
-    color: silver;
+    color: #84C576;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
@@ -338,7 +350,7 @@ svg {
 
 label {
     font-family: 'Chakra Petch', sans-serif;
-    width: 200px;
+    width: 230px;
     display: inline-block;
 }
 

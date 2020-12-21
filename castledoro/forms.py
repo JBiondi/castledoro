@@ -7,10 +7,7 @@ class NewCastleForm(forms.ModelForm):
     class Meta:
         model = Castle
         labels = {
-            'castle_name': ''
-        }
-        widgets = {
-            'castle_name': forms.TextInput(attrs={'id': 'create-new-castle-name-label'}),
+            'castle_name': 'create a new castle'
         }
         fields = ['castle_name']
 
