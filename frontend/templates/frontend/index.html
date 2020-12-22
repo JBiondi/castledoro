@@ -15,10 +15,15 @@
 
 {% if user.is_authenticated %}
     <div class="navigation">
-        <div class="nav-name">{{ user.username }} </div>
-        <a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a>
-        <a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a>
+        <ul class="nav-list" style="list-style-type: none;">
+            <li class="nav-left"><div class="nav-logo">CASTLEDORO</div></li>
+            <li class="nav-right"><div class="nav-name">{{ user.username }}</div></li>
+            <li class="nav-right"><a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a></li>
+            <li class="nav-right"><a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a></li>
+        </ul>
     </div>
+
+    <h2 class="homepage-header">home</h2>
 {% endif %}
 
 {% if not user.is_authenticated %}

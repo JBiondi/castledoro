@@ -15,32 +15,34 @@
 
 <div class="navigation">
     {% if user.is_authenticated %}
-        <div class="nav-name">{{ user.username }} </div>
-        <a class="nav-logout" href="{% url 'logout_namespace' %}">Logout</a>
-        <a class="nav-home" href="{% url 'home_namespace' %}">Home</a>
-    {% else %}
-        <a class="nav-login" href="{% url 'login_namespace' %}">Login</a>
-        <a class="nav-register" href="{% url 'user_registration_namespace' %}">Register</a>
+        <ul class="nav-list" style="list-style-type: none;">
+            <li class="nav-left"><div class="nav-logo">CASTLEDORO</div></li>
+            <li class="nav-right"><div class="nav-name">{{ user.username }}</div></li>
+            <li class="nav-right"><a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a></li>
+            <li class="nav-right"><a class="nav-home" href="{% url 'home_namespace' %}">home</a></li>
+        </ul>
     {% endif %}
 </div>
 
 <div class="profile-flex-container">
+{#    <h2 class="profile-page-header">profile</h2>#}
     <div class="create-new-castle-container">
         <form class="new-castle-form" method="POST" >
             <fieldset>
             {% csrf_token %}
-            {{ form.as_p }} <button type="submit" class="create-castle-button">Create</button>
+            {{ form.as_p }}
+            <button type="submit" class="create-castle-button">create</button>
             </fieldset>
         </form>
     </div>
-    <h2 class="profile-under-construction">under construction</h2>
+    <h2 class="profile-under-construction">⬇  castles in progress  ⬇</h2>
     <div class="current-castles-container">
         {% for castle in current_castles %}
-            <p>{{ castle.castle_name }}</p>
+            <p class="profile-castle-name">{{ castle.castle_name }}</p>
             <p>BLOCKS: {{ castle.completed_blocks }}/165</p>
             <p>MODIFIED: {{ castle.last_modified }} GMT</p>
-            <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
-            <button onclick="location.href = '/make_progress?castle={{ castle.castle_id }}'">Make progress on {{ castle.castle_name }}</button>
+            <button onclick="location.href = '/delete_castle'" class="profile-delete-button">delete</button>
+            <button onclick="location.href = '/make_progress?castle={{ castle.castle_id }}'" class="profile-progress-button">make progress</button>
             <br>
             <br>
         {% endfor %}
@@ -50,13 +52,15 @@
     <br>
     <br>
 
-    <h2 class="profile-completed">completed</h2>
+    <h2 class="profile-completed">⬇ castles completed ⬇</h2>
     <div class="completed-castles-container">
         {% for castle in completed_castles %}
-            <p>{{ castle.castle_name }}</p>
+            <p class="profile-castle-name">{{ castle.castle_name }}</p>
             <p>BLOCKS: {{ castle.completed_blocks }}/165</p>
             <p>MODIFIED: {{ castle.last_modified }} GMT</p>
-            <button onclick="location.href = '/delete_castle'">Delete {{ castle.castle_name }}</button>
+            <button onclick="location.href = '/delete_castle'" class="profile-delete-button">delete</button>
+            <br>
+            <br>
         {% endfor %}
     </div>
 

@@ -17,14 +17,14 @@
 
 <div class="navigation">
     {% if user.is_authenticated %}
-        <div class="nav-name">{{ user.username }} </div>
-        <a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a>
-        <a class="nav-home" href="{% url 'home_namespace' %}">home</a>
-        <a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a>
+       <ul class="nav-list" style="list-style-type: none;">
+            <li class="nav-left"><div class="nav-logo">CASTLEDORO</div></li>
+            <li class="nav-right"><div class="nav-name">{{ user.username }}</div></li>
+            <li class="nav-right"><a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a></li>
+            <li class="nav-right"><a class="nav-home" href="{% url 'home_namespace' %}">home</a></li>
+            <li class="nav-right"><a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a></li>
+        </ul>
 
-    {% else %}
-        <a class="nav-login" href="{% url 'login_namespace' %}">Login</a>
-        <a class="nav-register" href="{% url 'user_registration_namespace' %}">Register</a>
     {% endif %}
 </div>
 

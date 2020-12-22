@@ -114,34 +114,30 @@ body {
 }
 
 .navigation {
-    display: flex;
     height: 50px;
     background-color: darkolivegreen;
-    padding-left: 65%;
-}
-
-.nav-login {
-    padding: 10px;
-}
-
-.nav-register {
-    padding: 10px;
 }
 
 .nav-logout {
     padding: 10px;
+    height: 50px;
+    line-height: 50px;
     color: white;
     font-family: 'Chakra Petch', sans-serif;
 }
 
 .nav-user-profile {
     padding: 10px;
+    height: 50px;
+    line-height: 50px;
     color: white;
     font-family: 'Chakra Petch', sans-serif;
 }
 
 .nav-home {
     padding: 10px;
+    height: 50px;
+    line-height: 50px;
     color: white;
     font-family: 'Chakra Petch', sans-serif;
 }
@@ -150,6 +146,20 @@ body {
     color: #F7DC6F;
     font-family: 'Chakra Petch', sans-serif;
     padding: 10px;
+}
+
+.nav-logo {
+    color: #F7DC6F;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 10px;
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
 }
 
 .timer-display {
@@ -281,7 +291,7 @@ svg {
     padding: 15px;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    width: 28%;
+    width: 25%;
     border-radius: 3px;
 }
 
@@ -291,7 +301,7 @@ svg {
     padding: 15px;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    width: 28%;
+    width: 25%;
     border-radius: 3px;
 }
 
@@ -299,24 +309,23 @@ svg {
     color: #84C576;
     margin-left: 12px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
     height: 150px;
-    width: 28%;
+    width: 22%;
     border-radius: 3px;
 }
 
 .create-castle-button {
     background-color: #F7DC6F;
-    border-radius: 3px;
-    border: 2px solid #F7DC6F;
+    border-radius: 5px;
+    border: 2px solid darkslategray;
     color: black;
-    height: 33px;
+    height: 35px;
     width: 100px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 22px;
-    /*padding-bottom: 6px;*/
     text-align: center;
 }
 
@@ -342,6 +351,50 @@ svg {
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
 }
+
+.profile-castle-name {
+    color: darkslategray;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.profile-delete-button {
+    background-color: #F3895C;
+    border-radius: 5px;
+    border: 2px solid gray;
+    color: black;
+    height: 35px;
+    width: 100px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.profile-progress-button {
+    background-color: #F7DC6F;
+    border-radius: 5px;
+    border: 2px solid gray;
+    color: black;
+    height: 35px;
+    width: 200px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+.profile-page-header {
+    color: #84C576;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
+.homepage-header {
+    color: #84C576;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+}
+
 
 .new-user-registration-form {
     color: white;
