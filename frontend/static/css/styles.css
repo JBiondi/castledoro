@@ -167,28 +167,56 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 70px;
-    height: 30px;
-    background-color: lightcyan;
+    width: 85px;
+    height: 35px;
+    background-color: turquoise;
     border: 2px solid midnightblue;
     border-radius: 3px;
+    color: darkred;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 23px;
+}
+
+#reset-timer-button {
+    background-color: aliceblue;
+    height: 23px;
+    border: 1px outset cyan;
+    border-radius: 2px;
+    font-family: 'Chakra Petch', sans-serif;
+    margin-left: 8px;
+}
+
+#pause-timer-button {
+    background-color: aliceblue;
+    height: 23px;
+    border: 1px outset cyan;
+    border-radius: 2px;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 #minutes-input-id {
-    width: 95px;
+    width: 93px;
     justify-content: center;
     height: 22px;
     margin-bottom: 5px;
+    margin-right: 4px;
     padding-left: 5px;
     font-size: 15px;
 }
 
 #timer-submit-id {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 7px;
+    /*margin-bottom: 5px;*/
     padding-bottom: 5px;
-    height: 28px;
+    padding-top: 6px;
+    height: 40px;
     width: 80px;
+    background-color: darkturquoise;
+    text-transform: lowercase;
+    border: 1px outset cyan;
+    border-radius: 3px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
 }
 
 .minutes {
@@ -245,9 +273,9 @@ svg {
 }
 
 .timer-container {
-    width: 200px;
+    width: 220px;
     max-height: 100px;
-    background-color: lemonchiffon;
+    /*background-color: lemonchiffon;*/
     padding: 5px;
     justify-content: center;
     border-radius: 2px;
