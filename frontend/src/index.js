@@ -1,5 +1,5 @@
-const pauseTimerButton = document.querySelector('.pause-timer');
-const resetTimerButton = document.querySelector('.reset-timer');
+const pauseTimerButton = document.querySelector('#pause-timer-button');
+const resetTimerButton = document.querySelector('#reset-timer-button');
 
 const minutesInput = document.querySelector('.minutes-input');
 const timerSubmit = document.querySelector('.timer-submit');
@@ -48,8 +48,7 @@ if (resetTimerButton) {
     resetTimerButton.addEventListener('click', function () {
         clearInterval(startTimer);
         startTimer = undefined;
-        minutesDisplay.innerText = '00';
-        secondsDisplay.innerText = '00';
+        location.reload(true);
         console.log('Timer has been reset')
     })
 }

@@ -170,7 +170,7 @@ body {
     width: 85px;
     height: 35px;
     background-color: turquoise;
-    border: 2px solid midnightblue;
+    border: 1px solid lime;
     border-radius: 3px;
     color: darkred;
     font-family: 'Chakra Petch', sans-serif;
@@ -180,18 +180,20 @@ body {
 #reset-timer-button {
     background-color: aliceblue;
     height: 23px;
-    border: 1px outset cyan;
+    border: 1px outset deepskyblue;
     border-radius: 2px;
     font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
     margin-left: 8px;
 }
 
 #pause-timer-button {
     background-color: aliceblue;
     height: 23px;
-    border: 1px outset cyan;
+    border: 1px outset deepskyblue;
     border-radius: 2px;
     font-family: 'Chakra Petch', sans-serif;
+    font-size: 15px;
 }
 
 #minutes-input-id {
@@ -206,14 +208,14 @@ body {
 
 #timer-submit-id {
     margin-top: 7px;
-    /*margin-bottom: 5px;*/
+    margin-left: 5px;
     padding-bottom: 5px;
-    padding-top: 6px;
+    padding-top: 5px;
     height: 40px;
     width: 80px;
-    background-color: darkturquoise;
+    background-color: #F7DC6F;
     text-transform: lowercase;
-    border: 1px outset cyan;
+    border: 2px outset #F7DC6F;
     border-radius: 3px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 20px;
@@ -259,6 +261,7 @@ body {
 .svg-container {
     display: flex;
     flex-wrap: nowrap;
+    /*position: relative;*/
     width: 90%;
     height: 60vh;
     margin-left: 13%;
@@ -471,4 +474,20 @@ fieldset {
 li {
     color: lightcoral;
     font-size: 21px;
+}
+
+/*SMALL SCREEN CONSIDERATIONS*/
+
+@media only screen and (max-width: 580px) {
+
+.svg-container {
+    height: 30vh;
+}
+
+svg {
+    /*height: 30vh;*/
+    max-width: 400px;
+    justify-content: center;
+}
+
 }
