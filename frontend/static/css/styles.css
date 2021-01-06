@@ -169,7 +169,7 @@ body {
     justify-content: center;
     width: 85px;
     height: 35px;
-    background-color: turquoise;
+    background-color: #1ee3dc;
     border: 1px solid lime;
     border-radius: 3px;
     color: darkred;
@@ -260,25 +260,21 @@ body {
 
 .svg-container {
     display: flex;
-    flex-wrap: nowrap;
-    /*position: relative;*/
-    width: 90%;
+    position: relative;
+    width: 95vh;
     height: 60vh;
-    margin-left: 13%;
+    margin: auto;
 }
 
 svg {
     position: absolute;
-    max-height: 60%;
-    max-width: 60%;
-    min-height: 0;
-    justify-content: flex-end;
+    height: 100%;
+    width: 90%;
 }
 
 .timer-container {
     width: 220px;
     max-height: 100px;
-    /*background-color: lemonchiffon;*/
     padding: 5px;
     justify-content: center;
     border-radius: 2px;
@@ -287,7 +283,6 @@ svg {
 
 .progress-castle-info {
     margin-top: 10px;
-    margin-right: 10px;
     color: lemonchiffon;
     font-family: 'Chakra Petch', sans-serif;
     text-align: center;
@@ -480,14 +475,22 @@ li {
 
 @media only screen and (max-width: 580px) {
 
-.svg-container {
-    height: 30vh;
-}
+    .svg-container {
+        height: 30vh;
+    }
 
-svg {
-    /*height: 30vh;*/
-    max-width: 400px;
-    justify-content: center;
-}
+    svg {
+        /*height: 30vh;*/
+        max-width: 400px;
+        justify-content: center;
+    }
+
+    .nav-name {
+        display: none;
+    }
+
+    .nav-home {
+        display: none;
+    }
 
 }
