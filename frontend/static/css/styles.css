@@ -471,20 +471,42 @@ li {
     font-size: 21px;
 }
 
-/*SMALL SCREEN CONSIDERATIONS*/
+/*SMALLER SCREEN CONSIDERATIONS*/
 
-@media only screen and (max-width: 580px) {
+/*IPAD PRO*/
+@media only screen and (max-width: 1026px) and (min-width: 770px ) {
 
     .svg-container {
-        height: 30vh;
+        height: 50vh;
+        padding-left: 115px;
     }
 
     svg {
-        /*height: 30vh;*/
-        max-width: 400px;
-        justify-content: center;
+        max-width: 806px;
     }
 
+    .timer-container {
+        padding-left: 50px;
+    }
+
+    .progress-castle-info {
+        padding-left: 17px;
+    }
+}
+
+/*IPAD*/
+@media only screen and (max-width: 769px) and (min-width: 541px ) {
+    .svg-container {
+        height: 50vh;
+    }
+
+    svg {
+        max-width: 775px;
+    }
+}
+
+/*!*PIXEL2 / PIXEL2 XL *!*/
+@media only screen and (max-width: 411px) and (min-width: 411px ) {
     .nav-name {
         display: none;
     }
@@ -493,4 +515,174 @@ li {
         display: none;
     }
 
+    .nav-logout {
+        font-size: 18px;
+    }
+
+    .nav-user-profile {
+        font-size: 18px;
+    }
+
+    .svg-container {
+        height: 40vh;
+        padding-left: 1px;
+    }
+
+    svg {
+        max-width: 406px;
+    }
+
+    .timer-container {
+        padding-left: 10px;
+    }
+}
+
+/*IPHONE 6/7/8 PLUS*/
+@media only screen and (max-width: 416px) and (min-width: 412px ) {
+    .nav-name {
+        display: none;
+    }
+
+    .nav-home {
+        display: none;
+    }
+
+    .nav-logout {
+        font-size: 18px;
+    }
+
+    .nav-user-profile {
+        font-size: 18px;
+    }
+
+    .progress-castle-info {
+        padding-left: 12px;
+    }
+
+    .svg-container {
+        height: 40vh;
+        padding-left: 3px;
+    }
+
+    svg {
+        max-width: 406px;
+    }
+
+    .timer-container {
+        padding-left: 20px;
+    }
+}
+
+/*IPHONE 6/7/8/X */
+@media only screen and (max-width: 376px) and (min-width: 374px ) {
+    .nav-name {
+        display: none;
+    }
+
+    .nav-home {
+        display: none;
+    }
+
+    .nav-logout {
+        font-size: 18px;
+    }
+
+    .nav-user-profile {
+        font-size: 18px;
+    }
+
+    .progress-castle-info {
+        padding-left: 7px;
+    }
+
+    .svg-container {
+        height: 35vh;
+        padding-left: 8px;
+    }
+
+    svg {
+        max-width: 350px;
+    }
+
+    .timer-container {
+        padding-left: 16px;
+    }
+}
+
+/*GALAXY S5*/
+@media only screen and (max-width: 361px) and (min-width: 359px ) {
+    .nav-name {
+        display: none;
+    }
+
+    .nav-home {
+        display: none;
+    }
+
+    .nav-logout {
+        font-size: 18px;
+    }
+
+    .nav-user-profile {
+        font-size: 18px;
+    }
+
+    .progress-castle-info {
+        padding-left: 6px;
+    }
+
+    .svg-container {
+        height: 40vh;
+    }
+
+    svg {
+        max-width: 355px;
+    }
+
+    .timer-container {
+        padding-left: 22px;
+    }
+}
+
+/*IPHONE 5/SE*/
+@media only screen and (max-width: 324px){
+    .nav-name {
+        display: none;
+    }
+
+    .nav-home {
+        display: none;
+    }
+
+    .nav-logout {
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .nav-user-profile {
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    .nav-logo {
+        padding-top: 10px;
+        padding-right: 2px;
+        padding-left: 0;
+    }
+
+    .progress-castle-info {
+        padding-left: 17px;
+    }
+
+    .svg-container {
+        height: 30vh;
+    }
+
+    svg {
+        max-width: 324px;
+    }
+
+    .timer-container {
+        padding-left: 35px;
+    }
 }
