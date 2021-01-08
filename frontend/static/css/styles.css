@@ -471,14 +471,14 @@ li {
     font-size: 21px;
 }
 
-/*SMALLER SCREEN CONSIDERATIONS*/
+/*SCREEN SIZE CONSIDERATIONS*/
 
-/*IPAD PRO*/
+/* SHRINKING BROWSER */
 @media only screen and (max-width: 1026px) and (min-width: 770px ) {
 
+
     .svg-container {
-        height: 50vh;
-        padding-left: 115px;
+        height: 40vh;
     }
 
     svg {
@@ -486,13 +486,14 @@ li {
     }
 
     .timer-container {
-        padding-left: 50px;
+        padding-left: 30px;
     }
 
     .progress-castle-info {
         padding-left: 17px;
     }
 }
+
 
 /*IPAD*/
 @media only screen and (max-width: 769px) and (min-width: 541px ) {
@@ -505,37 +506,6 @@ li {
     }
 }
 
-/*!*PIXEL2 / PIXEL2 XL *!*/
-@media only screen and (max-width: 411px) and (min-width: 411px ) {
-    .nav-name {
-        display: none;
-    }
-
-    .nav-home {
-        display: none;
-    }
-
-    .nav-logout {
-        font-size: 18px;
-    }
-
-    .nav-user-profile {
-        font-size: 18px;
-    }
-
-    .svg-container {
-        height: 40vh;
-        padding-left: 1px;
-    }
-
-    svg {
-        max-width: 406px;
-    }
-
-    .timer-container {
-        padding-left: 10px;
-    }
-}
 
 /*IPHONE 6/7/8 PLUS*/
 @media only screen and (max-width: 416px) and (min-width: 412px ) {
@@ -570,6 +540,38 @@ li {
 
     .timer-container {
         padding-left: 20px;
+    }
+}
+
+/*!*PIXEL2 / PIXEL2 XL *!*/
+@media only screen and (max-width: 411px) and (min-width: 411px ) {
+    .nav-name {
+        display: none;
+    }
+
+    .nav-home {
+        display: none;
+    }
+
+    .nav-logout {
+        font-size: 18px;
+    }
+
+    .nav-user-profile {
+        font-size: 18px;
+    }
+
+    .svg-container {
+        height: 40vh;
+        padding-left: 1px;
+    }
+
+    svg {
+        max-width: 406px;
+    }
+
+    .timer-container {
+        padding-left: 10px;
     }
 }
 
@@ -685,4 +687,18 @@ li {
     .timer-container {
         padding-left: 35px;
     }
+}
+
+
+/*FIREFOX CONSIDERATIONS*/
+
+@supports (-moz-appearance:meterbar)  {
+    .timer-container {
+      width: 225px;
+    }
+
+    #minutes-input-id {
+        font-size: 14px;
+    }
+
 }
