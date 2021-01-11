@@ -438,8 +438,6 @@ svg {
     text-align: center;
 }
 
-
-
 .new-user-registration-form {
     color: white;
     padding: 5px;
@@ -648,6 +646,12 @@ li {
 
 /*IPHONE 5/SE*/
 @media only screen and (max-width: 324px){
+
+    .navigation {
+        /*why is there a gap on the right?*/
+        width: 100%;
+    }
+
     .nav-name {
         display: none;
     }
@@ -659,6 +663,7 @@ li {
     .nav-logout {
         font-size: 15px;
         padding: 2px;
+        padding-right: 10px;
     }
 
     .nav-user-profile {
@@ -686,6 +691,81 @@ li {
 
     .timer-container {
         padding-left: 35px;
+    }
+
+    .profile-flex-container {
+        align-items: center;
+    }
+
+    .create-new-castle-container {
+        text-align: center;
+        width: 75%;
+        height: 125px;
+        padding-right: 40px;
+        margin-bottom: 17px;
+    }
+
+    .new-castle-form {
+        font-size: 18px;
+    }
+
+    input {
+        width: 100px;
+        height: 18px;
+        border-radius: 2px;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 5px;
+    }
+
+    .create-castle-button {
+        width: 65px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .profile-under-construction {
+        font-size: 21px;
+        padding-left: 5px;
+    }
+
+    .current-castles-container {
+        width: 70%;
+        margin-left: 3px;
+    }
+
+    .profile-castle-name {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .profile-delete-button {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .profile-progress-button {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .profile-completed {
+        font-size: 21px;
+        padding-left: 5px;
+        margin-top: 25px;
+    }
+
+    .profile-line {
+        display: none;
+    }
+
+    .completed-castles-container {
+        width: 70%;
+        margin-left: 3px;
     }
 }
 
