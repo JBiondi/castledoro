@@ -502,6 +502,77 @@ li {
     svg {
         max-width: 775px;
     }
+
+    .create-new-castle-container {
+        text-align: center;
+        width: 35%;
+        height: 125px;
+        padding-right: 10px;
+        margin-bottom: 17px;
+    }
+
+    .new-castle-form {
+        font-size: 18px;
+    }
+
+    input {
+        width: 100px;
+        height: 18px;
+        border-radius: 2px;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 5px;
+    }
+
+    .create-castle-button {
+        width: 80px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .profile-under-construction {
+        font-size: 21px;
+        padding-left: 5px;
+    }
+
+    .current-castles-container {
+        width: 50%;
+        margin-left: 3px;
+    }
+
+    .profile-castle-name {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .profile-delete-button {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .profile-progress-button {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .profile-completed {
+        font-size: 21px;
+        padding-left: 5px;
+        margin-top: 25px;
+    }
+
+    .profile-line {
+        display: none;
+    }
+
+    .completed-castles-container {
+        width: 50%;
+        margin-left: 3px;
+    }
 }
 
 
@@ -539,6 +610,77 @@ li {
     .timer-container {
         padding-left: 20px;
     }
+
+    .create-new-castle-container {
+        text-align: center;
+        width: 75%;
+        height: 125px;
+        padding-right: 10px;
+        margin-bottom: 17px;
+    }
+
+    .new-castle-form {
+        font-size: 18px;
+    }
+
+    input {
+        width: 100px;
+        height: 18px;
+        border-radius: 2px;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 5px;
+    }
+
+    .create-castle-button {
+        width: 80px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .profile-under-construction {
+        font-size: 21px;
+        padding-left: 5px;
+    }
+
+    .current-castles-container {
+        width: 70%;
+        margin-left: 3px;
+    }
+
+    .profile-castle-name {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .profile-delete-button {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .profile-progress-button {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .profile-completed {
+        font-size: 21px;
+        padding-left: 5px;
+        margin-top: 25px;
+    }
+
+    .profile-line {
+        display: none;
+    }
+
+    .completed-castles-container {
+        width: 70%;
+        margin-left: 3px;
+    }
 }
 
 /*!*PIXEL2 / PIXEL2 XL *!*/
@@ -570,6 +712,77 @@ li {
 
     .timer-container {
         padding-left: 10px;
+    }
+
+    .create-new-castle-container {
+        text-align: center;
+        width: 75%;
+        height: 125px;
+        padding-right: 10px;
+        margin-bottom: 17px;
+    }
+
+    .new-castle-form {
+        font-size: 18px;
+    }
+
+    input {
+        width: 100px;
+        height: 18px;
+        border-radius: 2px;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 5px;
+    }
+
+    .create-castle-button {
+        width: 80px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .profile-under-construction {
+        font-size: 21px;
+        padding-left: 5px;
+    }
+
+    .current-castles-container {
+        width: 70%;
+        margin-left: 3px;
+    }
+
+    .profile-castle-name {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .profile-delete-button {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .profile-progress-button {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .profile-completed {
+        font-size: 21px;
+        padding-left: 5px;
+        margin-top: 25px;
+    }
+
+    .profile-line {
+        display: none;
+    }
+
+    .completed-castles-container {
+        width: 70%;
+        margin-left: 3px;
     }
 }
 
@@ -607,6 +820,78 @@ li {
     .timer-container {
         padding-left: 16px;
     }
+
+    .create-new-castle-container {
+        text-align: center;
+        width: 75%;
+        height: 125px;
+        padding-right: 10px;
+        margin-bottom: 17px;
+    }
+
+    .new-castle-form {
+        font-size: 18px;
+    }
+
+    input {
+        width: 100px;
+        height: 18px;
+        border-radius: 2px;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 5px;
+    }
+
+    .create-castle-button {
+        width: 80px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .profile-under-construction {
+        font-size: 21px;
+        padding-left: 5px;
+    }
+
+    .current-castles-container {
+        width: 70%;
+        margin-left: 3px;
+    }
+
+    .profile-castle-name {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .profile-delete-button {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .profile-progress-button {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .profile-completed {
+        font-size: 21px;
+        padding-left: 5px;
+        margin-top: 25px;
+    }
+
+    .profile-line {
+        display: none;
+    }
+
+    .completed-castles-container {
+        width: 70%;
+        margin-left: 3px;
+    }
+
 }
 
 /*GALAXY S5*/
@@ -641,6 +926,77 @@ li {
 
     .timer-container {
         padding-left: 22px;
+    }
+
+    .create-new-castle-container {
+        text-align: center;
+        width: 75%;
+        height: 125px;
+        padding-right: 15px;
+        margin-bottom: 17px;
+    }
+
+    .new-castle-form {
+        font-size: 18px;
+    }
+
+    input {
+        width: 100px;
+        height: 18px;
+        border-radius: 2px;
+        font-size: 12px;
+        padding-left: 3px;
+        padding-right: 3px;
+        margin-top: 5px;
+    }
+
+    .create-castle-button {
+        width: 65px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    .profile-under-construction {
+        font-size: 21px;
+        padding-left: 5px;
+    }
+
+    .current-castles-container {
+        width: 70%;
+        margin-left: 3px;
+    }
+
+    .profile-castle-name {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .profile-delete-button {
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .profile-progress-button {
+        width: 180px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .profile-completed {
+        font-size: 21px;
+        padding-left: 5px;
+        margin-top: 25px;
+    }
+
+    .profile-line {
+        display: none;
+    }
+
+    .completed-castles-container {
+        width: 70%;
+        margin-left: 3px;
     }
 }
 
