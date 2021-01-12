@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to Castledoro!</title>
+    <title>Castledoro</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
@@ -58,8 +58,8 @@
                     <button type="submit" class="homepage-register-button">Sign Up</button>
                 </fieldset>
             </form>
-        <br>
-        <br>
+        <br class="homepage-line">
+        <br class="homepage-line">
         <h3 class="homepage-login-text">already have an account?</h3>
             <a class="homepage-login-link" href="{% url 'login_namespace' %}">Log in</a>
     {% endif %}
