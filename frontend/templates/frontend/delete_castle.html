@@ -8,23 +8,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Delete a castle</title>
     <link rel="stylesheet" href="../../static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="{% static '/img/favi.ico' %}"/>
 </head>
-<body>
 
-<h1>Delete a castle</h1>
+<body style="background-color: #282422">
 
+<div class="navigation">
+        <ul class="nav-list" style="list-style-type: none;">
+            <li class="nav-left"><div class="nav-logo">CASTLEDORO</div></li>
+            <li class="nav-right"><div class="nav-name">{{ user.username }}</div></li>
+            <li class="nav-right"><a class="nav-logout" href="{% url 'logout_namespace' %}">logout</a></li>
+            <li class="nav-right"><a class="nav-user-profile" href="{% url 'user_profile_namespace' %}">profile</a></li>
+        </ul>
+    </div>
+
+<h1 class="delete-page-header">delete a castle</h1>
 
 <div class="delete-castle-form-container">
 
     <form class="delete-castle-form" method="POST" >
         {% csrf_token %}
         <fieldset>
-            <legend>Delete a castle :(</legend>
             {{ form.as_p }}
+            <button type="submit" class="delete-page-delete-button">delete</button>
         </fieldset>
-
-        <button type="submit">Delete</button>
     </form>
 </div>
 

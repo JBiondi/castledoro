@@ -443,6 +443,32 @@ svg {
     padding: 5px;
 }
 
+.delete-page-header {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #F7DC6F;
+    text-align: center;
+}
+
+.delete-castle-form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.delete-page-delete-button {
+    background-color: #F3895C;
+    border-radius: 5px;
+    border: 2px solid gray;
+    color: black;
+    height: 35px;
+    width: 100px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    float: right;
+}
+
+
 label {
     font-family: 'Chakra Petch', sans-serif;
     width: 230px;

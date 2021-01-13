@@ -16,6 +16,9 @@ class DeleteCastleForm(forms.ModelForm):
 
     class Meta:
         model = Castle
+        labels = {
+            'castle_name': 'castle name'
+        }
         fields = ['castle_name']
 
 
