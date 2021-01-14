@@ -1,0 +1,1 @@
+web: gunicorn castledoro_project.wsgi
