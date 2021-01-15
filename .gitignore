@@ -60,6 +60,3 @@ venv/
 
 # node
 node_modules
-
-#temporary
-frontend/static/img/
