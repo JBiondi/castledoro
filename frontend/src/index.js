@@ -66,7 +66,7 @@ const csrftoken = getCookie('csrftoken');
 
 
 function populateCompletedBlocks() {
-    fetch(`http://127.0.0.1:8000/populate_prev_blocks_api_endpoint/`, {
+    fetch(`http://castledoro.herokuapp.com/populate_prev_blocks_api_endpoint/`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -112,8 +112,9 @@ function runTimer() {
         if (minutesDisplay.innerText < 10) {
             minutesExtraZero.style.display = 'block';
             secondsExtraZero.style.display = 'none';
-            secondsDisplay.innerText = 3;
-            // secondsDisplay.innerText = 59;
+            // to speed up when testing use this
+            // secondsDisplay.innerText = 3;
+            secondsDisplay.innerText = 59;
             minutesDisplay.innerText--;
         }
 
@@ -171,7 +172,7 @@ function runTimer() {
 
 
 function updateCastleBlocks(callback) {
-    fetch(`http://127.0.0.1:8000/session_completed_api_endpoint/`, {
+    fetch(`http://castledoro.herokuapp.com/session_completed_api_endpoint/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
