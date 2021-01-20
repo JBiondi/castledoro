@@ -14,7 +14,8 @@ SECRET_KEY = os.environ.get('CASTLEDORO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('CASTLEDORO_DEBUG_VALUE')
 
-ALLOWED_HOSTS = ['castledoro.herokuapp.com']
+ALLOWED_HOSTS = ['castledoro.com',
+                 'castledoro.herokuapp.com']
 
 # Application definition
 
@@ -114,5 +115,14 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'user_profile_namespace'
 LOGIN_URL = 'login_namespace'
 LOGOUT_REDIRECT_URL = 'login_namespace'
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+
+CSRF_TRUSTED_ORIGINS = ['castledoro.com',
+                        '.castledoro.com',
+                        'castledoro.herokuapp.com',
+                        '.castledoro.herokuapp.com',
+                        ]
 
 django_heroku.settings(locals())

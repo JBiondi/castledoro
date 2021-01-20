@@ -66,7 +66,7 @@ const csrftoken = getCookie('csrftoken');
 
 
 function populateCompletedBlocks() {
-    fetch(`https://castledoro.herokuapp.com/populate_prev_blocks_api_endpoint/`, {
+    fetch(`https://castledoro.com/populate_prev_blocks_api_endpoint/`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ function runTimer() {
 
 
 function updateCastleBlocks(callback) {
-    fetch(`https://castledoro.herokuapp.com/session_completed_api_endpoint/`, {
+    fetch(`https://castledoro.com/session_completed_api_endpoint/`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
