@@ -41,6 +41,20 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+
+CORS_ORIGIN_WHITELIST = [
+    'https://castledoro.com',
+    'https://castledoro.herokuapp.com'
+]
+
+CSRF_TRUSTED_ORIGINS = ['castledoro.com',
+                        '.castledoro.com',
+                        'castledoro.herokuapp.com',
+                        '.castledoro.herokuapp.com',
+                        ]
+
 ROOT_URLCONF = 'castledoro_project.urls'
 
 TEMPLATES = [
@@ -115,19 +129,5 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'user_profile_namespace'
 LOGIN_URL = 'login_namespace'
 LOGOUT_REDIRECT_URL = 'login_namespace'
-
-CORS_ORIGIN_WHITELIST = [
-    'https://castledoro.com',
-    'https://castledoro.herokuapp.com'
-]
-
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-
-CSRF_TRUSTED_ORIGINS = ['castledoro.com',
-                        '.castledoro.com',
-                        'castledoro.herokuapp.com',
-                        '.castledoro.herokuapp.com',
-                        ]
 
 django_heroku.settings(locals())
