@@ -70,6 +70,7 @@ function populateCompletedBlocks() {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
+            'Accept': 'application/json',
             'X-CSRFToken': csrftoken,
         }
     })
@@ -176,6 +177,7 @@ function updateCastleBlocks(callback) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
+            'Accept': 'application/json',
             'X-CSRFToken': csrftoken,
         }
     })
