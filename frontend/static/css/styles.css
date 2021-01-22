@@ -178,9 +178,9 @@ body {
 }
 
 #reset-timer-button {
-    background-color: aliceblue;
+    background-color: #F7DC6F;
     height: 23px;
-    border: 1px outset deepskyblue;
+    border: 1px outset #F7DC6F;
     border-radius: 2px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 15px;
@@ -188,9 +188,9 @@ body {
 }
 
 #pause-timer-button {
-    background-color: aliceblue;
+    background-color: #F7DC6F;
     height: 23px;
-    border: 1px outset deepskyblue;
+    border: 1px outset #F7DC6F;
     border-radius: 2px;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 15px;
@@ -249,13 +249,9 @@ body {
 }
 
 .block {
-    fill: lavender;
+    fill: slategrey;
     stroke-width: .1px;
     stroke: black;
-}
-
-.current-block {
-    fill: crimson;
 }
 
 .svg-container {
@@ -304,7 +300,6 @@ svg {
     justify-content: center;
     margin-top: 5px;
 }
-
 
 .profile-flex-container {
     display: flex;
