@@ -207,18 +207,16 @@ body {
 }
 
 #timer-submit-id {
-    margin-top: 7px;
-    margin-left: 5px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    height: 40px;
-    width: 80px;
+    margin-left: 10px;
+    justify-content: center;
+    height: 25px;
+    width: 65px;
     background-color: #F7DC6F;
     text-transform: lowercase;
     border: 2px outset #F7DC6F;
-    border-radius: 3px;
+    border-radius: 2px;
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .minutes {

@@ -87,7 +87,7 @@ function populateCompletedBlocks() {
             blocksArray.forEach(block => {
                 indexesArray.forEach(idx => {
                     if (block.classList.contains(`block${idx}`)) {
-                        block.style.fill = 'lavender';
+                        block.style.fill = 'lightgrey';
                     }
                 })
             });
