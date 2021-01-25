@@ -40,11 +40,12 @@ if (pauseTimerButton) {
         if (startTimer) {
             clearInterval(startTimer);
             startTimer = undefined;
-            console.log('Timer paused)')
+            pauseTimerButton.innerHTML = 'resume';
+            console.log('Timer paused)');
         }
         else {
-            console.log('We resuming?')
             startTimer = setInterval(runTimer, 1000)
+            pauseTimerButton.innerHTML = 'pause';
         }
     })
 }

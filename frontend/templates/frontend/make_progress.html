@@ -156,8 +156,6 @@
 <div class="info-and-timer-flex-container">
 
     <div class="timer-container">
-        <input type="text" placeholder="enter minutes" class="minutes-input" id="minutes-input-id"> <input type="submit" value="submit" class="timer-submit" id="timer-submit-id">
-
         <div class="timer-display">
             <div class="minutes-extra-zero">0</div><div class="minutes-display">00</div><div class="colon">:</div><div class="seconds-extra-zero">0</div><div class="seconds-display">00</div>
         </div>
@@ -165,10 +163,12 @@
         <button id="reset-timer-button">reset</button>
         <button id="pause-timer-button">pause</button>
 
+        <input type="text" placeholder="enter minutes" class="minutes-input" id="minutes-input-id"> <input type="submit" value="submit" class="timer-submit" id="timer-submit-id">
+
     </div>
 </div>
 
-<div class="congrats-message">You finished {{ castle_in_progress.castle_name }}! That's seriously impressive. Congrats!</div>
+<div class="congrats-message">You finished {{ castle_in_progress.castle_name }}! That's seriously impressive. Congratulations!</div>
 
 <div class="return-to-profile-link">
     <a href="{% url 'user_profile_namespace' %}" target="_parent"><button>Return to profile page</button></a>
