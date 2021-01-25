@@ -37,9 +37,15 @@ if (timerSubmit) {
 
 if (pauseTimerButton) {
     pauseTimerButton.addEventListener('click', function() {
-        clearInterval(startTimer);
-        startTimer = undefined;
-        console.log('Timer paused)')
+        if (startTimer) {
+            clearInterval(startTimer);
+            startTimer = undefined;
+            console.log('Timer paused)')
+        }
+        else {
+            console.log('We resuming?')
+            startTimer = setInterval(runTimer, 1000)
+        }
     })
 }
 
