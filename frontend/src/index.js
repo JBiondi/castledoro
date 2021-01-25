@@ -23,13 +23,18 @@ let startTimer;
 
 if (timerSubmit) {
     timerSubmit.addEventListener('click', function () {
-        if (startTimer === undefined) {
+        if (minutesInput && minutesInput < 100) {
+            if (startTimer === undefined) {
             minutesDisplay.innerText = minutesInput.value;
-            console.log(`MD = ${minutesDisplay.innerText}`)
-            startTimer = setInterval(runTimer, 1000)
+            console.log(`MD = ${minutesDisplay.innerText}`);
+            startTimer = setInterval(runTimer, 1000);
 
-        } else {
-            alert('The timer is already counting down')
+            } else {
+                alert('The timer is already counting down');
+            }
+        }
+        else {
+            alert('Enter a valid number of minutes (more than zero, less than 100)');
         }
     })
 }
