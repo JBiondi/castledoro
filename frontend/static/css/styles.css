@@ -175,6 +175,7 @@ body {
     color: darkred;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 23px;
+    margin-bottom: 10px;
 }
 
 #reset-timer-button {
@@ -267,7 +268,7 @@ svg {
 }
 
 .timer-container {
-    width: 220px;
+    width: 230px;
     max-height: 100px;
     padding: 5px;
     justify-content: center;
@@ -1309,7 +1310,7 @@ li {
 
 @supports (-moz-appearance:meterbar)  {
     .timer-container {
-      width: 225px;
+      width: 235px;
     }
 
     #minutes-input-id {
