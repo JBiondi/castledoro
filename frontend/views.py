@@ -18,7 +18,7 @@ def index(request):
             login(request, new_user)
             return redirect('user_profile_namespace')
 
-    context = {'registration_form': registration_form, 'product_blurb1': 'visualize your deep work sessions',
-               'product_blurb2': 'build a castle, brick by brick'}
+    context = {'registration_form': registration_form, 'product_blurb1': 'visualize your progress toward mastering a skill',
+               'product_blurb2': 'castledoro adds a brick to your castle every time you complete a pomodoro session'}
 
     return render(request, 'frontend/index.html', context)

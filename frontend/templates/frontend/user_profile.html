@@ -25,12 +25,12 @@
 </div>
 
 <div class="profile-flex-container">
-{#    <h2 class="profile-page-header">profile</h2>#}
     <div class="create-new-castle-container">
         <form class="new-castle-form" method="POST" >
             <fieldset>
             {% csrf_token %}
             {{ form.as_p }}
+                <div class="hint">name it after a skill you want to master</div>
             <button type="submit" class="create-castle-button">create</button>
             </fieldset>
         </form>
