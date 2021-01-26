@@ -23,7 +23,7 @@ let startTimer;
 
 if (timerSubmit) {
     timerSubmit.addEventListener('click', function () {
-        if (minutesInput > 0 && minutesInput < 100) {
+        if (minutesInput.value > 0 && minutesInput.value < 100) {
             if (startTimer === undefined) {
                 minutesDisplay.innerText = minutesInput.value;
                 startTimer = setInterval(runTimer, 1000);
