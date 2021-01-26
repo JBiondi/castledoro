@@ -29,6 +29,7 @@
     <div class="product-blurb">{{ product_blurb1 }}</div>
     <div class="homepage-photo-container"><img src="{% static '/img/homepage_photo.png' %}" alt="castle made of building blocks" class="homepage-photo"/></div>
     <div class="product-blurb">{{ product_blurb2 }}</div>
+    <div class="product-blurb">{{ product_blurb3 }}</div>
 {% endif %}
 
 {% if not user.is_authenticated %}
@@ -36,6 +37,7 @@
     <div class="product-blurb">{{ product_blurb1 }}</div>
     <div class="homepage-photo-container"><img src="{% static '/img/homepage_photo.png' %}" alt="castle made of building blocks" class="homepage-photo"/></div>
     <div class="product-blurb">{{ product_blurb2 }}</div>
+    <div class="product-blurb">{{ product_blurb3 }}</div>
     <br>
 {% endif %}
 

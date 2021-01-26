@@ -348,12 +348,14 @@ svg {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 22px;
     text-align: center;
+    margin-top: 5px;
 }
 
 .hint {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     color: lemonchiffon;
+    margin-bottom: 2px;
 }
 
 .completed-blocks-value {
