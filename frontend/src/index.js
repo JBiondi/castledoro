@@ -193,7 +193,7 @@ function updateCastleBlocks(callback) {
 
             if (completedBlocksAsInt < 165) {
                 completedBlocksText.innerHTML = `${completedBlocksAsString} /165`;
-                alert('Session complete, a new block is about to be added to your castle!)');
+                alert('Session complete, a new block is about to be added to your castle!');
                 blocksArray.forEach(block => {
                     if (block.classList.contains(`block${completedBlocksAsString}`)) {
                             block.style.fill = 'dimgrey';
