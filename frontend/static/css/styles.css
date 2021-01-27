@@ -333,7 +333,7 @@ svg {
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Chakra Petch', sans-serif;
-    height: 150px;
+    height: 180px;
     width: 22%;
     border-radius: 3px;
 }
@@ -534,7 +534,7 @@ li {
     .create-new-castle-container {
         text-align: center;
         width: 35%;
-        height: 125px;
+        height: 200px;
         padding-right: 10px;
         margin-bottom: 17px;
     }
@@ -642,7 +642,7 @@ li {
     .create-new-castle-container {
         text-align: center;
         width: 75%;
-        height: 125px;
+        height: 200px;
         padding-right: 10px;
         margin-bottom: 17px;
     }
@@ -777,7 +777,7 @@ li {
     .create-new-castle-container {
         text-align: center;
         width: 75%;
-        height: 125px;
+        height: 200px;
         padding-right: 10px;
         margin-bottom: 17px;
     }
@@ -916,7 +916,7 @@ li {
     .create-new-castle-container {
         text-align: center;
         width: 75%;
-        height: 125px;
+        height: 200px;
         padding-right: 10px;
         margin-bottom: 17px;
     }
@@ -1055,7 +1055,7 @@ li {
     .create-new-castle-container {
         text-align: center;
         width: 75%;
-        height: 125px;
+        height: 200px;
         padding-right: 15px;
         margin-bottom: 17px;
     }
@@ -1212,7 +1212,7 @@ li {
     .create-new-castle-container {
         text-align: center;
         width: 75%;
-        height: 155px;
+        height: 200px;
         padding-right: 40px;
         margin-bottom: 17px;
     }
