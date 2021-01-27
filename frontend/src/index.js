@@ -45,7 +45,6 @@ if (pauseTimerButton) {
             clearInterval(startTimer);
             startTimer = undefined;
             pauseTimerButton.innerHTML = 'resume';
-            console.log('Timer paused)');
         }
         else {
             startTimer = setInterval(runTimer, 1000)
@@ -60,7 +59,6 @@ if (resetTimerButton) {
         clearInterval(startTimer);
         startTimer = undefined;
         location.reload(true);
-        console.log('Timer has been reset')
     })
 }
 
@@ -88,11 +86,10 @@ function populateCompletedBlocks() {
     .then(response => {
             return response.json();
         })
-    .then(function colorBlocks (data) {
 
+    .then(function colorBlocks (data) {
             const stringData = JSON.stringify(data);
             const numData = parseInt(stringData, 10);
-
             const indexesArray = [...Array(numData + 1).keys()]
 
             blocksArray.forEach(block => {
@@ -112,13 +109,9 @@ if(document.URL.indexOf("make_progress") >= 0){
 
 
 function runTimer() {
-    console.log("Running timer!")
+       const seconds = Number(secondsDisplay.innerText);
 
-    const seconds = Number(secondsDisplay.innerText);
-
-    console.log(minutesDisplay.innerText, seconds);
-
-    // Dont worry about this warning we are taking advantage of the type coercion
+    // Dont worry about this warning, we are taking advantage of the type coercion
     if (minutesDisplay.innerText != 0 && seconds === 0) {
 
         if (minutesDisplay.innerText < 10) {
@@ -167,7 +160,6 @@ function runTimer() {
     }
 
     else if (minutesDisplay.innerText == 0 && seconds === 0) {
-        console.log('ENDED');
         minutesExtraZero.style.display = 'none';
         secondsExtraZero.style.display = 'none';
         minutesDisplay.innerText = '00';
@@ -196,16 +188,15 @@ function updateCastleBlocks(callback) {
             return response.json();
         })
     .then(function updateBlocksHTML (data) {
-            console.log(`This is the data ${data}`);
             const completedBlocksAsString = JSON.stringify(data);
             const completedBlocksAsInt = parseInt(completedBlocksAsString);
 
             if (completedBlocksAsInt < 165) {
                 completedBlocksText.innerHTML = `${completedBlocksAsString} /165`;
+                alert('Session complete, a new block is about to be added to your castle!)');
                 blocksArray.forEach(block => {
                     if (block.classList.contains(`block${completedBlocksAsString}`)) {
                             block.style.fill = 'dimgrey';
-                            alert('Session complete, a new block has been added to your castle!)');
                     }
                 });
             }
