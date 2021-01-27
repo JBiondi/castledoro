@@ -205,10 +205,9 @@ function updateCastleBlocks(callback) {
                 blocksArray.forEach(block => {
                     if (block.classList.contains(`block${completedBlocksAsString}`)) {
                             block.style.fill = 'dimgrey';
+                            alert('Session complete, a new block has been added to your castle!)');
                     }
                 });
-                alert('Session complete, a new block has been added to your castle!)');
-
             }
             else if (completedBlocksAsInt === 165) {
                 completedBlocksText.innerHTML = `${completedBlocksAsString} /165`;
