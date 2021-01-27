@@ -207,6 +207,8 @@ function updateCastleBlocks(callback) {
                             block.style.fill = 'dimgrey';
                     }
                 });
+                alert('Session complete, a new block has been added to your castle!)');
+
             }
             else if (completedBlocksAsInt === 165) {
                 completedBlocksText.innerHTML = `${completedBlocksAsString} /165`;
