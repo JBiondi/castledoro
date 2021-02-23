@@ -2,7 +2,7 @@
 
 https://castledoro.com is a web application that helps you track your progress toward mastering new skills. A new brick is added to your castle each time you complete a 'deep work' pomodoro session.
 
-I wanted an app like this to exist since I'm learning new skills all the time as an apprentice level software developer. Pomodoro sessions work well for me, and I'm continually inspired by the github contributions graph. So I made Castledoro, an intersection of those tools.
+I wanted this app to exist because I'm learning new skills all the time as an apprentice level software developer. Pomodoro sessions work well for me, and I'm continually inspired by the github contributions graph. So I made Castledoro, an intersection of those tools.
 
 ### Tech Stack
 
